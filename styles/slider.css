@@ -4,7 +4,7 @@
     height: 100svh;
     overflow: hidden;
 }
-
+ /* DE LUCART LA ÎNĂȘȚIMEA DINAMICĂ LA HIDER*/
 .slide {
     display: flex;
     position: absolute;
