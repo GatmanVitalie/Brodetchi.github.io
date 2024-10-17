@@ -17,11 +17,7 @@
     object-fit: cover;
 }
 
-.slide-in {
-    display: none;
-}
-
-
+.slide-in,
 .slide-out {
     display: none;
 }
@@ -37,14 +33,39 @@
     aspect-ratio: 1/1;
     border-radius: 100%;
     cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.5s ease;
 }
 
 .prev:hover, .next:hover {
-    position: absolute;
     background-color: rgba(255, 255, 255, 0.899);
     color: rgb(0, 0, 0);
-    /*box-shadow: 0px 0px 6px 2px rgb(255, 255, 255);*/
-    cursor: pointer;
+    transform: scale(1.07); /* Scale up on hover */
+}
+
+.prev:active, .next:active {
+    background-color: rgba(255, 255, 255, 0.7); /* Translucent on click */
+    transform: scale(1.1); /* Keep scale consistent */
+}
+
+.arrow {
+    display: inline-block;
+    transition: transform 0.3s ease; /* Arrow movement */
+    font-size: 24px; /* Slim arrow */
+}
+
+/* Keep the arrow in place on hover */
+.prev:hover .arrow,
+.next:hover .arrow {
+    transform: translateX(0); /* No movement on hover */
+}
+
+/* Move the arrow on click */
+.prev:active .arrow {
+    transform: translateX(-10px); /* Move arrow left on click */
+}
+
+.next:active .arrow {
+    transform: translateX(10px); /* Move arrow right on click */
 }
 
 .prev {
