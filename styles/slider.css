@@ -4,17 +4,16 @@
     height: 100svh;
     overflow: hidden;
 }
- /* DE LUCART LA ÎNĂȘȚIMEA DINAMICĂ LA HIDER*/
+
 .slide {
     display: flex;
     position: absolute;
     width: 100%;
-    height: calc(100svh - var(--header-height));
+    height: 100%;
 }
 
 .slide img {
     width: 100%;
-    object-fit: cover;
 }
 
 .slide-in,
@@ -44,7 +43,7 @@
 
 .prev:active, .next:active {
     background-color: rgba(255, 255, 255, 0.7); /* Translucent on click */
-    transform: scale(1.1); /* Keep scale consistent */
+    transform: scale(1.07); /* Keep scale consistent */
 }
 
 .arrow {
