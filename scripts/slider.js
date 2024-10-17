@@ -17,13 +17,13 @@ function showSlide(index) {
 function triggerAnimation(slideId) {
     if (slideId === 'slide1') {
         // Adaugă animația pentru slide-ul 1
-        document.querySelector('#slide1 img').style.animation = 'fadeIn 2s ease';
+        document.querySelector('#.//images/Dumnezeu2.jpg img').style.animation = 'fadeIn 2s ease';
     } else if (slideId === 'slide2') {
         // Adaugă animația pentru slide-ul 2
-        document.querySelector('#slide2 img').style.animation = 'slideIn 2s ease';
+        document.querySelector('#.//images/Dumnezeu2.jpg img').style.animation = 'slideIn 2s ease';
     } else if (slideId === 'slide3') {
         // Adaugă animația pentru slide-ul 3
-        document.querySelector('#slide3 img').style.animation = 'zoomIn 2s ease';
+        document.querySelector('#.//images/Dumnezeu2.jpg img').style.animation = 'zoomIn 2s ease';
     }
 }
 
