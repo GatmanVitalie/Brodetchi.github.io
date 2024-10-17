@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    padding-top: 0px; /* Adjust this as needed for the header height */
 }
 
 header {
