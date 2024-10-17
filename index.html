@@ -10,20 +10,27 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/slider.css">
 
-
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+    
     <link rel="shortcut icon" href="image-removebg-preview-removebg-preview.png" type="image/x-icon">
 </head>
 <body>
-     <!-- HEADERUL (header.css) -->
+    <!-- HEADERUL (header.css) -->
     <header>
         <nav>
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">PORTOFOLIO</a></li>
-                <li><a href="#">SHOP</a></li>
-                <li><a href="#">ELEMNTS</a></li>
-            </ul>
+            <div class="container">
+                <ul class="left-menu">
+                    <li><button class="nav-btn">HOME</button></li>
+                    <li><button class="nav-btn">PORTOFOLIO</button></li>
+                </ul>   
+                <a href="#" class="logo">Brodețchi</a>
+                <ul class="right-menu">
+                    <li><button class="nav-btn">SHOP</button></li>
+                    <li><button class="nav-btn">ELEMENTS</button></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -44,10 +51,8 @@
             <button class="prev" onclick="prevSlide()">&#10094;</button>
             <button class="next" onclick="nextSlide()">&#10095;</button>
         </div>
-        
     </section>
     
-
     <!-- Script-uri pentru slider -->
     <script src="scripts/slider.js"></script>
     <script src="scripts/main.js"></script>
