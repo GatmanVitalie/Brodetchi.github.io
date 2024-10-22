@@ -39,23 +39,45 @@
     <section class="content">
 
         <!-- Image slider (slider.css) -->
-        <div class="slider">
-            <div class="slide" id="slide1">
-                <img src="images/image.jpg" alt="Slide 1">
+        <div class="slider" id="slider">
+            <div class="slide">
+                <img src="images/image.jpg">
+                <div class="text">
+                    <h1>Peste cu<br>ciocolată</h1>
+                    <button onclick="about()" id="MoreB" onmouseover="stopSlides()" onmouseleave="beginSlides()">Află
+                        mai multe</button>
+                </div>
             </div>
-            <div class="slide-in" id="slide2">
-                <img src="images/Dumnezeu2.jpg" alt="Slide 2">
+            <div class="slide">
+                <img src="images/Narcaman Brodetchi.png">
+                <div class="text">
+                    <h1>Efectul<br>Pâinii</h1>
+                    <button onclick="about()" id="MoreB" onmouseover="stopSlides()" onmouseleave="beginSlides()">Află
+                        mai multe</button>
+                </div>
             </div>
-            <div class="slide-out" id="slide3">
-                <img src="images/Dumnezeu2.jpg" alt="Slide 3">
+            <div class="slide">
+                <img src="images/Dumnezeu2.jpg">
+                <div class="text">
+                    <h1>Pâunea noastră face<br>din om dumnezeu</h1>
+                    <button onclick="about()" id="MoreB" onmouseover="stopSlides()" onmouseleave="beginSlides()">Află
+                        mai multe</button>
+                </div>
             </div>
-            <!-- Butoanele de navigare -->
-            <button class="prev">
-                <span class="arrow">&#10094;</span>
-            </button>
-            <button class="next">
-                <span class="arrow">&#10095;</span>
-            </button>
+            <div class="slide">
+                <img src="images/Tort1.jpg">
+                <div class="text">
+                    <h1>Prosta<br>Briosa</h1>
+                    <button onclick="about()" id="MoreB" onmouseover="stopSlides()" onmouseleave="beginSlides()">Află
+                        mai multe</button>
+                </div>
+            </div>
+
+            <button class="backButon" id="backButon" onclick="back()"><img src="images/back.png"
+                    onmouseover="stopSlides()" onmouseleave="beginSlides()"></img></button>
+            <button class="nextButon" id="nextButon" onclick="forword()"><img src="images/next.png"
+                    onmouseover="stopSlides()" onmouseleave="beginSlides()"></img></button>
+            <button class="downButon" id="downButon" onclick="scrollDown()"><img src="images/up-arrow (1).png"></button>
         </div>
 
         <!-- Product Section -->
@@ -72,5 +94,7 @@
         </section>
 
     </section>
+
+    <script src="scripts/slider.js"></script>
 </body>
 </html>
