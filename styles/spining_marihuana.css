@@ -1,0 +1,35 @@
+/* Container for the entire product section */
+.product-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Styles for the image */
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Adds slight rounding to the image corners */
+    width: 45%; /* Adjusts the image width */
+}
+
+/* Styles for the text section */
+.product-description {
+    background-color: #333; /* Background color for the text */
+    color: #fff; /* White text on dark background */
+    padding: 20px;
+    border-radius: 10px; /* Adds slight rounding to the text box corners */
+    width: 45%; /* Adjusts the text width */
+}
+
+.product-description h2 {
+    font-family: 'Playwrite', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.product-description p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
