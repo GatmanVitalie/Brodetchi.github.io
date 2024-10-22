@@ -1,16 +1,14 @@
 /* Container for the entire product section */
 .product-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center container content */
     align-items: center;
-    margin: 20px 0;
-    gap: 20px; /* Adds space between the image and the description */
 }
 
 /* Styles for the image */
 .product-image img {
     max-width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 10px; /* Adds slight rounding to the image corners */
     width: 45%; /* Adjusts the image width */
 }
@@ -35,11 +33,12 @@
     line-height: 1.5;
 }
 
+/* Center the heading across the page */
 .center-heading {
-    font-family: 'Playwrite';
+    font-family: 'Playwrite', sans-serif;
     font-size: 56px;
     font-weight: 700;
-    text-align: center; /* Center the heading across the page */
+    text-align: center; /* Center the heading */
     width: 100%; /* Ensure the heading takes the full width */
     margin-bottom: 20px; /* Add space below the heading */
     align-items: center;
