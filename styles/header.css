@@ -25,11 +25,14 @@ nav {
     align-content: center;
     flex-wrap: nowrap;
     flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 nav .logo {
     color: #fff;
     font-size: 28px; /* Font size for the logo */
+    transform: translate(0%, -6.9%);
     font-weight: 700;
     text-decoration: none;
     padding: 0 20px;
@@ -92,6 +95,10 @@ nav ul li {
 
 .left-menu, .right-menu {
     display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
 /* Make the entire body unselectable if you want */
