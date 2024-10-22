@@ -13,14 +13,12 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
     padding: 10px 20px; /* Adjust padding for a smaller header */
 }
 
 .container {
     display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
