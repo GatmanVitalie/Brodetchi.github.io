@@ -30,14 +30,19 @@ nav {
 }
 
 nav .logo {
-    color: #fff;
     font-size: 28px; /* Font size for the logo */
     transform: translate(0%, -6.9%);
     font-weight: 700;
     text-decoration: none;
     padding: 0 20px;
     user-select: none; /* Make the logo text unselectable */
+    
+    /* Gradient from orange to white */
+    background: linear-gradient(to top, #ff8419 , #FFDBBB );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
 
 nav ul {
     display: flex;
@@ -53,7 +58,7 @@ nav ul li {
 /* Button Styling for Nav Links */
 .nav-btn {
     background-color: transparent;
-    color: #b8a9a9;
+    color: #af8b6b;
     border: none;
     font-size: 16.5px; /* Font size for the menu buttons */
     font-weight: 900;
@@ -61,7 +66,7 @@ nav ul li {
     padding: 5px 10px;
     cursor: pointer;
     position: relative;
-    background: linear-gradient(90deg, #b8a9a9 50%, #fff 50%);
+    background: linear-gradient(90deg, #af8b6b 50%, #ffd1a9 50%);
     background-size: 200%;
     background-position: 0 0;
     -webkit-background-clip: text;
@@ -81,7 +86,7 @@ nav ul li {
     bottom: -2px;
     width: 0%;
     height: 2px;
-    background-color: #fff;
+    background-color: #ffd1a9 ;
     transition: width 0.4s ease-out; /* Line grows from left to right */
 }
 
