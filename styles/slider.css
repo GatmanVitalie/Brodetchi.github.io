@@ -111,14 +111,20 @@
   right: 50%;
   outline-color: black;
   opacity: 0.4;
+  user-select: none; /* Disable text selection */
+  pointer-events: none; /* Prevent pointer events */
 }
 .slide.slideout img {
   opacity: 0.4;
+  user-select: none; /* Disable text selection */
+  pointer-events: none; /* Prevent pointer events */
 }
 .slide.slidein img {
   opacity: 1;
   animation: imgopac 700ms ease-in-out forwards;
   animation-delay: 0.8s;
+  user-select: none; /* Disable text selection */
+  pointer-events: none; /* Prevent pointer events */
 }
 @keyframes imgopac {
   from {
@@ -244,4 +250,16 @@
   .slider {
     display: none;
   }
+}
+
+.slider,
+.slide {
+  user-select: none; /* Disable selection for the entire slider and slides */
+  pointer-events: none; /* Prevent pointer events for slides */
+}
+
+.backButon,
+.nextButon,
+.downButon {
+  pointer-events: auto; /* Ensure buttons remain interactive */
 }
