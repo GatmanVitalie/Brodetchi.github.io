@@ -263,3 +263,7 @@
 .downButon {
   pointer-events: auto; /* Ensure buttons remain interactive */
 }
+
+#MoreB{
+    pointer-events: auto;
+}
