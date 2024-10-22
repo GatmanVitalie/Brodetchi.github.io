@@ -15,6 +15,7 @@ nav {
     justify-content: space-between;
     align-items: left;
     padding: 10px 20px; /* Adjust padding for a smaller header */
+    height: 4svh;
 }
 
 .container {

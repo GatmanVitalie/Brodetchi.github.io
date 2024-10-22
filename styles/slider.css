@@ -76,8 +76,8 @@
   position: relative;
   width: 100%;
   /* min-height: 42vw; */
-  max-height: 20cm;
-  height: calc(100svh - 2svh);
+  max-height: 60svw;
+  height: calc(100svh - 4svh);
   background-color: rgb(0, 0, 0);
   overflow-x: hidden;
 }
