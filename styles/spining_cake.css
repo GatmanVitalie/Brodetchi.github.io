@@ -50,7 +50,7 @@
 }
 
 .center-heading {
-    font-family: "Playwrite GB", sans-serif;
+    font-family: "Playwrite GB", sans-serif; /* Apply the desired font */
     font-size: 56px;
     font-weight: 700;
     text-align: center;

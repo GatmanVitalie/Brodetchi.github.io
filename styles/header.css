@@ -107,3 +107,8 @@ nav ul li {
     flex-direction: row;
     justify-content: flex-start;
 }
+
+/* Make the entire body unselectable if you want */
+body {
+    user-select: none;
+}
