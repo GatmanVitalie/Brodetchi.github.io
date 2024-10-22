@@ -4,6 +4,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 20px 0;
+    gap: 20px; /* Adds space between the image and the description */
 }
 
 /* Styles for the image */
@@ -32,4 +33,14 @@
 .product-description p {
     font-size: 1rem;
     line-height: 1.5;
+}
+
+.center-heading {
+    font-family: 'Playwrite';
+    font-size: 56px;
+    font-weight: 700;
+    text-align: center; /* Center the heading across the page */
+    width: 100%; /* Ensure the heading takes the full width */
+    margin-bottom: 20px; /* Add space below the heading */
+    align-items: center;
 }
