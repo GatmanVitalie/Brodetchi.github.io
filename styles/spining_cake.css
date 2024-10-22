@@ -1,52 +1,60 @@
-/* Container for the entire product section */
 .product-container {
     display: flex;
-    justify-content: center; /* Center container content */
-    align-items: stretch; /* Ensure the image and description have equal height */
-    margin: 20px 0;
+    justify-content: center;
+    margin: 20px 0px;
+    min-height: 30.8svw;
+    height: 40.4svh;
+    align-content: center;
+    align-items: stretch;
 }
 
-/* Styles for the image */
 .product-image {
-    width: 400; /* Set a fixed height to make it rectangular */
-    overflow: hidden; /* Hide overflow if image exceeds dimensions */
-    display: flex; /* Ensure the container can handle the image */
+    overflow: hidden;
+    display: flex;
+    width: 95.8vw;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 .product-image img {
     height: 100%;
-    width: 100%; /* Fill the width of the container */
-    object-fit: cover; /* Cover the container, maintaining aspect ratio */
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: row;
 }
 
-/* Styles for the text section */
 .product-description {
-    background-color: #333; /* Background color for the text */
-    color: #fff; /* White text on dark background */
+    background-color: rgb(51, 51, 51);
+    color: rgb(255, 255, 255);
     padding: 20px;
-    flex-grow: 1; /* Allows the description to take up remaining space */
+    flex-grow: 1;
     display: flex;
+    /* width: 60%; */
     justify-content: center;
     align-items: center;
-    text-align: center; /* Center the text inside the description */
-    min-height: 300px; /* Match the height of the image */
+    text-align: center;
+    min-height: 300px;
 }
 
-/* Description text styling */
 .product-description p {
-    margin: 0; /* Remove default margin */
+    margin: 0px;
     font-size: 1rem;
     line-height: 1.5;
     width: 100%;
 }
 
-/* Center the heading across the page */
 .center-heading {
-    font-family: 'Playwrite GB', sans-serif; /* Use Playwrite GB font */
+    font-family: "Playwrite GB", sans-serif;
     font-size: 56px;
     font-weight: 700;
-    text-align: center; /* Center the heading */
-    width: 100%; /* Ensure the heading takes the full width */
-    margin-bottom: 20px; /* Add space below the heading */
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
     align-items: center;
 }
