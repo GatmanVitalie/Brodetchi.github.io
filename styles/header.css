@@ -8,6 +8,7 @@ body {
 
 header {
     background-color: #333;
+    height: 9svh;
 }
 
 nav {
@@ -15,7 +16,7 @@ nav {
     justify-content: space-between;
     align-items: left;
     padding: 10px 20px; /* Adjust padding for a smaller header */
-    height: 4svh;
+    /* height: 4svh; */
 }
 
 .container {
@@ -105,9 +106,4 @@ nav ul li {
     align-content: center;
     flex-direction: row;
     justify-content: flex-start;
-}
-
-/* Make the entire body unselectable if you want */
-body {
-    user-select: none;
 }

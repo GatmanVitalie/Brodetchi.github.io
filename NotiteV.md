@@ -1,3 +1,3 @@
 # Notite Vitalie
 
-De lucrat la înălțimea dinamică la slider
+Făcut ca imaginile de pe butoane să nu poate fi luate

@@ -209,9 +209,8 @@ function More1a() {
 }
 
 function scrollDown() {
-    // You can adjust the values as per your requirement
     window.scrollTo({
-        top: window.pageYOffset + window.innerHeight,
-        behavior: 'smooth' // This will make the scroll smooth
+        top: window.innerHeight, // 100svh equivalent is the height of the viewport
+        behavior: 'smooth' // Smooth scroll
     });
 }
