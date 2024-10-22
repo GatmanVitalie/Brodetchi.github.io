@@ -2,15 +2,21 @@
 .product-container {
     display: flex;
     justify-content: center; /* Center container content */
-    align-items: center;
+    align-items: stretch; /* Ensure the image and description have equal height */
+    margin: 20px 0;
 }
 
 /* Styles for the image */
+.product-image {
+    width: 400; /* Set a fixed height to make it rectangular */
+    overflow: hidden; /* Hide overflow if image exceeds dimensions */
+    display: flex; /* Ensure the container can handle the image */
+}
+
 .product-image img {
-    max-width: 100%;
     height: 100%;
-    border-radius: 10px; /* Adds slight rounding to the image corners */
-    width: 45%; /* Adjusts the image width */
+    width: 100%; /* Fill the width of the container */
+    object-fit: cover; /* Cover the container, maintaining aspect ratio */
 }
 
 /* Styles for the text section */
@@ -18,24 +24,25 @@
     background-color: #333; /* Background color for the text */
     color: #fff; /* White text on dark background */
     padding: 20px;
-    border-radius: 10px; /* Adds slight rounding to the text box corners */
-    width: 45%; /* Adjusts the text width */
+    flex-grow: 1; /* Allows the description to take up remaining space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center the text inside the description */
+    min-height: 300px; /* Match the height of the image */
 }
 
-.product-description h2 {
-    font-family: 'Playwrite', sans-serif;
-    font-size: 2rem;
-    margin-bottom: 15px;
-}
-
+/* Description text styling */
 .product-description p {
+    margin: 0; /* Remove default margin */
     font-size: 1rem;
     line-height: 1.5;
+    width: 100%;
 }
 
 /* Center the heading across the page */
 .center-heading {
-    font-family: 'Playwrite', sans-serif;
+    font-family: 'Playwrite GB', sans-serif; /* Use Playwrite GB font */
     font-size: 56px;
     font-weight: 700;
     text-align: center; /* Center the heading */
