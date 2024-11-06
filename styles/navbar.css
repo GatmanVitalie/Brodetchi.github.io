@@ -1,0 +1,45 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 950px;
+    height: 180px;
+    background-color: rgba(255, 255, 255, 0); /* Fundal semi-transparent */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 10; /* Asigură-te că navbarul e deasupra video-ului */
+    align-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-self: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.logo
+{
+    background-color: rgba(231, 232, 234, 0.955);
+    width: 330px;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    object-fit: cover;
+    width: 83.4%;
+}
+
+/* Stil pentru video */
