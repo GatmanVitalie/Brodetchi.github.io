@@ -1,8 +1,8 @@
 .navbar {
-    position: fixed;
+    position: absolute;
     top: 0;
-    width: 100%;
-    max-width: 950px;
+    width: 90%;
+    max-width: 1200px;
     height: 180px;
     background-color: rgba(255, 255, 255, 0); /* Fundal semi-transparent */
     color: white;
@@ -19,7 +19,7 @@
 .navbar a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    /* margin: 0 15px; */
 }
 
 .navbar a:hover {
@@ -42,4 +42,54 @@
     width: 88%;
 }
 
-/* Stil pentru video */
+.nav-but
+{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.up-nav-but
+{
+    background-color: #ffffff68;
+    color: #ffffff;
+    padding: 10.2px 18px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20.5px;
+}
+
+.up-nav-but a
+{
+    margin: 0 9.6px;
+}
+
+.down-nav-but
+{
+    z-index: 1;
+}
+
+.nav-but img {
+ object-fit: cover;
+ height: 20px;
+ filter: invert(100%);
+}
+
+.nav-but button {
+ background-color: #ffffff00;
+ color: #ffffff;
+ display: flex;
+ align-items: flex-end;
+ align-content: center;
+ padding: 0;
+ flex-wrap: wrap;
+ flex-direction: row;
+}
