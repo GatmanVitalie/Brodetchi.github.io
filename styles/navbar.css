@@ -28,7 +28,7 @@
 
 .logo
 {
-    background-color: rgba(231, 232, 234, 0.955);
+    background-color: rgb(255, 255, 255);
     width: 330px;
     height: 100%;
     display: flex;
@@ -39,7 +39,7 @@
 
 .logo img {
     object-fit: cover;
-    width: 83.4%;
+    width: 88%;
 }
 
 /* Stil pentru video */
