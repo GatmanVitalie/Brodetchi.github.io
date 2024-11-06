@@ -1,18 +1,18 @@
 .product-container {
     display: flex;
-    justify-content: space-between; /* Space between the image and description */
+    justify-content: space-between; 
     margin: 20px 0px;
     min-height: 30.8svw;
     height: 40.4svh;
     align-content: center;
     align-items: stretch;
-    width: 100%; /* Ensures the container takes the full width */
+    width: 100%; 
 }
 
 .product-image {
     overflow: hidden;
     display: flex;
-    width: 50%; /* Adjusted width for the image */
+    width: 50%;
     align-items: center;
     justify-content: center;
 }
@@ -24,6 +24,7 @@
 }
 
 .product-description {
+    font-family: 'Playwrite GB S', sans-serif; 
     background-color: #0A1319;
     color: rgb(255, 255, 255);
     padding: 20px;
@@ -32,7 +33,7 @@
     align-items: center;
     text-align: left;
     min-height: 300px;
-    width: 175%; /* Adjusted width for the description */
+    width: 175%;
     box-sizing: border-box;
 }
 
@@ -40,11 +41,12 @@
     margin: 0px;
     font-size: 1.15rem;
     line-height: 1.5;
-    width: 100%;
+    width: 100%; 
+    font-family: "Playwrite GB", sans-serif;
 }
 
 .center-heading {
-    font-family: "Playwrite GB", sans-serif;
+    font-family: "Playwrite GB", sans-serif; 
     font-size: 56px;
     font-weight: 700;
     text-align: center;
