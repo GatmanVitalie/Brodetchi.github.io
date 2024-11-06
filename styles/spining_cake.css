@@ -1,20 +1,19 @@
 .product-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Space between the image and description */
     margin: 20px 0px;
     min-height: 30.8svw;
     height: 40.4svh;
     align-content: center;
     align-items: stretch;
+    width: 100%; /* Ensures the container takes the full width */
 }
 
 .product-image {
     overflow: hidden;
     display: flex;
-    width: 95.8vw;
+    width: 50%; /* Adjusted width for the image */
     align-items: center;
-    align-content: center;
-    flex-wrap: nowrap;
     justify-content: center;
 }
 
@@ -22,35 +21,30 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    display: flex;
-    align-items: center;
-    align-content: flex-start;
-    flex-wrap: nowrap;
-    flex-direction: row;
 }
 
 .product-description {
     background-color: #0A1319;
     color: rgb(255, 255, 255);
     padding: 20px;
-    flex-grow: 1;
     display: flex;
-    /* width: 60%; */
     justify-content: center;
     align-items: center;
     text-align: left;
     min-height: 300px;
+    width: 175%; /* Adjusted width for the description */
+    box-sizing: border-box;
 }
 
 .product-description p {
     margin: 0px;
-    font-size: 1rem;
+    font-size: 1.15rem;
     line-height: 1.5;
     width: 100%;
 }
 
 .center-heading {
-    font-family: "Playwrite GB", sans-serif; /* Apply the desired font */
+    font-family: "Playwrite GB", sans-serif;
     font-size: 56px;
     font-weight: 700;
     text-align: center;
