@@ -23,31 +23,22 @@
 
 <body>
     <!-- HEADERUL (header.css) -->
-    <header>
-        <nav>
-            <div class="container">
-                <ul class="left-menu">
-                    <a href="#" class="logo">Brodețchi</a>
-                    <li><button class="nav-btn">HOME</button></li>
-                    <li><button class="nav-btn">PORTOFOLIO</button></li>
-                </ul>
-                <ul class="right-menu">
-                    <li><button class="nav-btn">SHOP</button></li>
-                    <li><button class="nav-btn">ELEMENTS</button></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
 
     <!-- Corpul -->
     <section class="content">
 
         <!-- Main video (video.css) -->
-        <video controls>
-            <source src="images/DAEGHO - TIKI TAKA 🌐.mp4" type="video/mp4">
-            <source src="images/YOUNG GIRL A FUNK - ABDUKXRIM ~ (SLOWED + REVERB) [BRAZILIAN PHONK].mp4" type="video/ogg">
-          Your browser does not support the video tag.
-          </video>
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="images/DAEGHO - TIKI TAKA 🌐.mp4" type="video/mp4">
+                Browserul tău nu suportă video HTML5.
+            </video>
+
+            <audio autoplay loop>
+                <source src="audio.mp3" type="audio/mpeg">
+                Browserul tău nu suportă audio HTML5.
+            </audio>
+        </div>
 
         <!-- Product Section -->
         <section class="product-section">
