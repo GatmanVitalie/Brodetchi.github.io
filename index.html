@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,10 +14,12 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"
+        rel="stylesheet">
+
     <link rel="shortcut icon" href="images/image-removebg-preview-removebg-preview2.png" type="image/x-icon">
 </head>
+
 <body>
     <!-- HEADERUL (header.css) -->
     <header>
@@ -26,7 +29,7 @@
                     <a href="#" class="logo">Brodețchi</a>
                     <li><button class="nav-btn">HOME</button></li>
                     <li><button class="nav-btn">PORTOFOLIO</button></li>
-                </ul>   
+                </ul>
                 <ul class="right-menu">
                     <li><button class="nav-btn">SHOP</button></li>
                     <li><button class="nav-btn">ELEMENTS</button></li>
@@ -39,64 +42,72 @@
     <section class="content">
 
         <!-- Image slider (slider.css) -->
-        <div class="slider" id="slider">
-            <div class="slide">
-                <img src="images/image.jpg">
-                <div class="text">
-                    <h1>Peste cu<br>ciocolată</h1>
-                    <button onclick="about()" id="MoreB" onmouseover="stopSlides()" onmouseleave="beginSlides()">Află
-                        mai multe</button>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="images/Narcaman Brodetchi.png">
-                <div class="text">
-                    <h1>Efectul<br>Pâinii</h1>
-                    <button onclick="about()" id="MoreB" onmouseover="stopSlides()" onmouseleave="beginSlides()">Află
-                        mai multe</button>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="images/Dumnezeu2.jpg">
-                <div class="text">
-                    <h1>Pânea noastră face<br>din om dumnezeu</h1>
-                    <button onclick="about()" id="MoreB" onmouseover="stopSlides()" onmouseleave="beginSlides()">Află
-                        mai multe</button>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="images/e3c4c40b65167093b79cd21c99cf38e3.jpg">
-                <div class="text">
-                    <h1>Calul<br>Fumeaza</h1>
-                    <button onclick="about()" id="MoreB" onmouseover="stopSlides()" onmouseleave="beginSlides()">Află
-                        mai multe</button>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="images/Accoutrements Horse Head Mask.jfif">
-                <div class="text">
-                    <h1>Calul<br>Preda fizica</h1>
-                    <button onclick="about()" id="MoreB" onmouseover="stopSlides()" onmouseleave="beginSlides()">Află
-                        mai multe</button>
-                </div>
-            </div>
 
-            <button class="backButon" id="backButon" onclick="back()"><img src="images/back.png"
-                    onmouseover="stopSlides()" onmouseleave="beginSlides()"></img></button>
-            <button class="nextButon" id="nextButon" onclick="forword()"><img src="images/next.png"
-                    onmouseover="stopSlides()" onmouseleave="beginSlides()"></img></button>
-            <button class="downButon" id="downButon" onclick="scrollDown()"><img src="images/up-arrow (1).png"></button>
-        </div>
 
         <!-- Product Section -->
         <section class="product-section">
             <h2 class="center-heading">Produse Dulci</h2> <!-- Title aligned center -->
             <div class="product-container">
-                <div class="product-image">
-                    <img src="images/Tort1.jpg" alt="Cake Image">
+
+                <div class="slider" id="slider">
+                    <div class="slide">
+                        <img src="images/image.jpg">
+                        <div class="text">
+                            <h1>Peste cu<br>ciocolată</h1>
+                            <button onclick="about()" id="MoreB" onmouseover="stopSlides()"
+                                onmouseleave="beginSlides()">Află
+                                mai multe</button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/Narcaman Brodetchi.png">
+                        <div class="text">
+                            <h1>Efectul<br>Pâinii</h1>
+                            <button onclick="about()" id="MoreB" onmouseover="stopSlides()"
+                                onmouseleave="beginSlides()">Află
+                                mai multe</button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/Dumnezeu2.jpg">
+                        <div class="text">
+                            <h1>Pânea noastră face<br>din om dumnezeu</h1>
+                            <button onclick="about()" id="MoreB" onmouseover="stopSlides()"
+                                onmouseleave="beginSlides()">Află
+                                mai multe</button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/e3c4c40b65167093b79cd21c99cf38e3.jpg">
+                        <div class="text">
+                            <h1>Calul<br>Fumeaza</h1>
+                            <button onclick="about()" id="MoreB" onmouseover="stopSlides()"
+                                onmouseleave="beginSlides()">Află
+                                mai multe</button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/Accoutrements Horse Head Mask.jfif">
+                        <div class="text">
+                            <h1>Calul<br>Preda fizica</h1>
+                            <button onclick="about()" id="MoreB" onmouseover="stopSlides()"
+                                onmouseleave="beginSlides()">Află
+                                mai multe</button>
+                        </div>
+                    </div>
+
+                    <button class="backButon" id="backButon" onclick="back()"><img src="images/back.png"
+                            onmouseover="stopSlides()" onmouseleave="beginSlides()"></img></button>
+                    <button class="nextButon" id="nextButon" onclick="forword()"><img src="images/next.png"
+                            onmouseover="stopSlides()" onmouseleave="beginSlides()"></img></button>
+                    <button class="downButon" id="downButon" onclick="scrollDown()"><img
+                            src="images/up-arrow (1).png"></button>
                 </div>
+
                 <div class="product-description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan nunc ac dolor placerat ullamcorper. Vivamus at massa nec metus venenatis lacinia. Nunc vehicula a est ac pretium. Ut in ligula feugiat ligula porttitor gravida nec eget ligula.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan nunc ac dolor
+                        placerat ullamcorper. Vivamus at massa nec metus venenatis lacinia. Nunc vehicula a est ac
+                        pretium. Ut in ligula feugiat ligula porttitor gravida nec eget ligula.</p>
                 </div>
             </div>
         </section>
@@ -105,4 +116,5 @@
 
     <script src="scripts/slider.js"></script>
 </body>
+
 </html>
