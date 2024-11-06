@@ -214,3 +214,4 @@ function scrollDown() {
         behavior: 'smooth' // Smooth scroll
     });
 }
+

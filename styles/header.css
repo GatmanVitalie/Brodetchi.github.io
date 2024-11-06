@@ -107,3 +107,33 @@ nav ul li {
     flex-direction: row;
     justify-content: flex-start;
 }
+
+/* Main slider container */
+.slider {
+    position: relative;
+    width: 100%;           /* Full width */
+    height: 420px;         /* Fixed height for the slider (adjust this as needed) */
+    overflow: hidden;      /* Hide any content outside the container */
+    display: flex;         /* Flexbox for centering the content */
+    justify-content: center;
+    align-items: center;   /* Vertically center the images */
+}
+
+/* Individual slide */
+.slide {
+    width: 100%;           /* Ensure the slide takes full width of the container */
+    height: 100%;          /* Ensure the slide takes full height of the container */
+    display: flex;         /* Use flexbox to center content */
+    justify-content: center;
+    align-items: center;
+    position: relative;    /* Keeps the slide within bounds */
+}
+
+/* Image styling */
+.slide img {
+    width: 100%;            /* Make the image fill the full width of the slide */
+    height: 100%;           /* Ensure image height is constrained by the container height */
+    object-fit: cover;      /* Ensure image covers the container without stretching */
+    display: block;         /* Prevent any gaps below the image */
+    object-position: center;/* Center the image within the container */
+}
