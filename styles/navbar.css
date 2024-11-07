@@ -33,32 +33,25 @@
 }
 
 .navbar a {
-  color: white;
-  position: relative;
-  text-decoration: none;
-}
-
-.navbar a {
-  color: white;
-  position: relative;
-  text-decoration: none;
-  display: inline-block; /* Ensure underline is only as wide as the text */
-}
-
-.navbar a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  height: 2px;
-  background-color: white;
-  transition: width 0.5s ease-in-out;
-}
-
-.navbar a:hover::after {
-  width: 100%; /* Expand underline only to text width */
-}
+    color: white;
+    position: relative;
+    text-decoration: none; /* Remove default underline */
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline; /* Add simple underline on hover */
+    text-decoration-color: white; /* Ensure the underline is white */
+  }
+  
+  .down_nav_but a {
+    font-size: 1.29rem;
+    border-left: 2px solid #fff;
+    padding: 0 0.5rem;
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+  
 
 .down_nav_but a {
   font-size: 1.29rem;
