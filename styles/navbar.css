@@ -171,13 +171,18 @@
   transition: all ease 600ms;
 }
 
+.down_nav_but a:first-child {
+    border-left: none; /* Removes the left border from the first link */
+    margin-left: 1rem; /* Adds margin to the left of the first link */
+}
+
 .left_nav_but {
-  width: 39.8rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-  align-content: center;
+    width: 39.8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    align-content: center;
 }
 
 .right_nav_but {
