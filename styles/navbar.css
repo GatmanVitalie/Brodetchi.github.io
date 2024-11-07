@@ -109,15 +109,21 @@
   flex-direction: row;
   gap: 1rem;
   overflow: hidden;
-
   transition: all 400ms ease;
 }
 
 .up_nav_but a {
-    margin: 0 0.3rem;
-    font-size: 0.9rem;
-    font-family: Montserrat, sans-serif;
-    font-weight: 500;
+  margin: 0 0.3rem;
+  font-size: 0.9rem;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  text-decoration: none; /* Remove default underline */
+}
+
+.up_nav_but a:hover {
+  text-decoration: underline; /* Apply underline on hover */
+  text-decoration-color: white; /* Set the color of the underline */
+  text-decoration-thickness: 2px; /* Set the thickness of the underline */
 }
 
 .up_nav_but img {
