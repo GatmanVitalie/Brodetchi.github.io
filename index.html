@@ -23,24 +23,29 @@
         <div class="logo">
             <img src="images/brodetchi2.png" alt="Logo">
         </div>
-        <div class="nav-but">
-            <div class="up-nav-but">
+        <div class="nav_but">
+            <div class="up_nav_but">
                 <button class="tel"><img src="images/Phone.png"> <a href="#tel">+223 334 07</a> </button>
                 <button class="mail"><img src="images/email.png"><a href="#mail">brodethi@mail.com</a> </button>
                 <button class="location"><img src="images/pin.png"><a href="#loc">Str 12.4 Columna Orhei</a></button>
             </div>
 
-            <div class="down-nav-but">
-                <div class="left-nav-but">
+            <div class="down_nav_but">
+                <div class="left_nav_but">
                     <a href="#home">Acasă</a>
                     <a href="#about">Despre</a>
                     <a href="#services">Servicii</a>
+                    <a href="#catalog">Catalog</a>
                     <a href="#contact">Contacte</a>
-                    <a href="#tur">Tur Virtual</a>
+                    <!-- <a href="#tur">Tur Virtual</a> -->
                 </div>
-                <div class="right-nav-but">
-                   <button class="shearch">Search</button>
+                <div class="right_nav_but">
+                    <button class="search_button" onclick="showSearchInput()">
+                        <img src="images/magnifying-glass-svgrepo-com (1).svg" alt="search-icon"/>
+                        <input type="text" class="search_input" placeholder="Scrie aici..." onfocus="clearText()" onblur="restoreText()">
+                    </button>
                 </div>
+                
             </div>
         </div>
 
@@ -100,6 +105,7 @@
     </section>
 
     <script src="scripts/slider.js" defer></script>
+    <script src="scripts/search.js" defer></script>
 </body>
 
 </html>
