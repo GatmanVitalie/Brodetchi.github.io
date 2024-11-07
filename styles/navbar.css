@@ -1,13 +1,30 @@
 .navbar {
-    position: absolute;
-    top: 0;
+
     width: 100%;
     max-width: 1300px;
-    height: 11rem;
+    height: 100%;
     background-color: rgba(255, 255, 255, 0); /* Fundal semi-transparent */
     color: white;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    z-index: 10; /* Asigură-te că navbarul e deasupra video-ului */
+    align-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-self: center;
+}
+
+.navbar_container
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 11rem;
+    background-color: rgba(255, 255, 255, 0); /* Fundal semi-transparent */
+    color: white;
+    display: flex;
+    justify-content: center;
     align-items: flex-start;
     z-index: 10; /* Asigură-te că navbarul e deasupra video-ului */
     align-content: flex-start;
@@ -210,4 +227,9 @@
     align-items: center;
     justify-content: center;
     align-content: center;
+}
+
+
+.navbar.scrolled {
+    background-color: #000;
 }

@@ -18,34 +18,46 @@
 
 
 <body>
-    <!-- navbar (navbar.css) -->
-    <div class="navbar">
-        <div class="logo">
-            <img src="images/brodetchi2.png" alt="Logo">
-        </div>
-        <div class="nav_but">
-            <div class="up_nav_but">
-                <button class="tel"><img src="images/Phone.png"> <a href="#tel">+223 334 07</a> </button>
-                <button class="mail"><img src="images/email.png"><a href="#mail">brodethi@mail.com</a> </button>
-                <button class="location"><img src="images/pin.png"><a href="#loc">Str 12.4 Columna Orhei</a></button>
-            </div>
+    <!-- <audio autoplay loop>
+        <source src="images/tika.mp3" type="audio/mp3">
+        Browserul tău nu suportă audio HTML5.
+    </audio>   -->
 
-            <div class="down_nav_but">
-                <div class="left_nav_but">
-                    <a href="#home">Acasă</a>
-                    <a href="#about">Despre</a>
-                    <a href="#services">Servicii</a>
-                    <a href="#catalog">Catalog</a>
-                    <a href="#contact">Contacte</a>
-                    <!-- <a href="#tur">Tur Virtual</a> -->
+
+    <!-- navbar (navbar.css) -->
+    <div class="navbar_container">
+
+
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/brodetchi2.png" alt="Logo">
+            </div>
+            <div class="nav_but">
+                <div class="up_nav_but">
+                    <button class="tel"><img src="images/Phone.png"> <a href="#tel">+223 334 07</a> </button>
+                    <button class="mail"><img src="images/email.png"><a href="#mail">brodethi@mail.com</a> </button>
+                    <button class="location"><img src="images/pin.png"><a href="#loc">Str 12.4 Columna
+                            Orhei</a></button>
                 </div>
-                <div class="right_nav_but">
-                    <button class="search_button" onclick="showSearchInput()">
-                        <img src="images/magnifying-glass-svgrepo-com (1).svg" alt="search-icon"/>
-                        <input type="text" class="search_input" placeholder="Scrie aici..." onfocus="clearText()" onblur="restoreText()">
-                    </button>
+
+                <div class="down_nav_but">
+                    <div class="left_nav_but">
+                        <a href="#home">Acasă</a>
+                        <a href="#about">Despre</a>
+                        <a href="#services">Servicii</a>
+                        <a href="#catalog">Catalog</a>
+                        <a href="#contact">Contacte</a>
+                        <!-- <a href="#tur">Tur Virtual</a> -->
+                    </div>
+                    <div class="right_nav_but">
+                        <button class="search_button" onclick="showSearchInput()">
+                            <img src="images/magnifying-glass-svgrepo-com (1).svg" alt="search-icon" />
+                            <input type="text" class="search_input" placeholder="Scrie aici..." onfocus="clearText()"
+                                onblur="restoreText()">
+                        </button>
+                    </div>
+
                 </div>
-                
             </div>
         </div>
 
@@ -62,10 +74,7 @@
                 Browserul tău nu suportă video HTML5.
             </video>
 
-            <audio autoplay loop>
-                <source src="images/tika.mp3" type="audio/mp3">
-                Browserul tău nu suportă audio HTML5.
-            </audio>  
+
         </div>
 
         <!-- Product Section -->
@@ -106,6 +115,7 @@
 
     <script src="scripts/slider.js" defer></script>
     <script src="scripts/search.js" defer></script>
+    <script src="scripts/navbar.js" defer></script>
 </body>
 
 </html>
