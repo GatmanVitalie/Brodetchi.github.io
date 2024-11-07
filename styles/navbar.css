@@ -51,7 +51,10 @@
     color: white;
     position: relative;
   }
-  
+
+  .down_nav_but a:first-child {
+    border-left: none; /* Remove the left border from the first link */
+  }
 
 .down_nav_but a {
   font-size: 1.29rem;
@@ -279,3 +282,7 @@
   border-left: 2px solid #000;
   transition: all ease-in-out 900ms;
 }
+
+.scrolled .down_nav_but a:first-child {
+    border-left: none; /* Remove the left border from the first link */
+  }
