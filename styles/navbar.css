@@ -83,7 +83,9 @@
 
 .up_nav_but a {
     margin: 0 0.3rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
 }
 
 .up_nav_but img {
@@ -144,6 +146,9 @@
     align-items: center;
     justify-content: flex-end;
     align-content: center;
+    font-family: 'Cormorant Garamond', serif !important;
+    font-weight: 500;
+    font-size: 1rem;
 }
 
 .right_nav_but {
