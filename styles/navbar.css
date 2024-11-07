@@ -28,7 +28,7 @@
 
 .logo
 {
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
     width: 330px;
     height: 100%;
     display: flex;
@@ -99,4 +99,24 @@
 .down-nav-but
 {
     z-index: 1;
+    width: 100%;
+}
+
+
+
+.down-nav-but a
+{
+    font-size: 30px;
+    border-left: 2px solid #fff;
+    width: 120px;
+}
+
+.left-nav-but
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: flex-start;
 }
