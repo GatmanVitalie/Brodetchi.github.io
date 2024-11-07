@@ -157,7 +157,6 @@
 
 .down_nav_but a {
   font-size: 1.29rem;
-  /* width: 100%; */
   border-left: 2px solid #fff;
   width: 7.9rem;
   text-align: center;
@@ -279,6 +278,7 @@
 
 .scrolled .down_nav_but a {
   color: #000;
+  font-size: 1.3rem;
   border-left: 2px solid #000;
   transition: all ease-in-out 900ms;
 }
