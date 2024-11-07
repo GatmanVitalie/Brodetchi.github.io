@@ -123,7 +123,7 @@
 .up_nav_but a:hover {
   text-decoration: underline; /* Apply underline on hover */
   text-decoration-color: white; /* Set the color of the underline */
-  text-decoration-thickness: 1.5px; /* Set the thickness of the underline */
+  text-decoration-thickness: 2px; /* Set the thickness of the underline */
 }
 
 .up_nav_but img {
