@@ -1,3 +1,3 @@
 # Notite Cristi
-
-De lucrat la descrierea la imagine
+De jucat cu funturile
+De făcut ca imagimile să nu paotă fi luate
