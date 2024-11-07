@@ -2,7 +2,7 @@
     position: absolute;
     top: 0;
     width: 90%;
-    max-width: 1200px;
+    max-width: 1300px;
     height: 180px;
     background-color: rgba(255, 255, 255, 0); /* Fundal semi-transparent */
     color: white;
@@ -44,7 +44,7 @@
 
 .nav-but
 {
-    height: 100px;
+    height: 85.9px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -100,15 +100,25 @@
 {
     z-index: 1;
     width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
 }
 
 
 
 .down-nav-but a
 {
-    font-size: 30px;
+    font-size: 22px;
     border-left: 2px solid #fff;
-    width: 120px;
+    width: 115px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
 }
 
 .left-nav-but
@@ -120,3 +130,25 @@
     justify-content: center;
     align-content: flex-start;
 }
+
+.right-nav-but
+{
+    width: 120px;
+}
+
+.right-nav-but button
+{
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 100px;
+    height: 35px;
+    width: 100%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
