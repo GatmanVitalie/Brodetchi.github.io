@@ -380,7 +380,7 @@
 }
 
 /* Ecran mic    */
-@media only screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .nav_but {
     display: none;
   }
@@ -400,14 +400,36 @@
 }
 
 /*Telefon        */
-@media only screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
   .navbar_container {
     background-color: #fff;
-    height: 4rem;
+    height: 10svw;
+    min-height: 9svh;
   }
 
   .logo {
-    height: 3rem;
-    width: 9rem;
+    height: 100%;
+    width: 20svw;
+    min-width: 18svh;
+  }
+
+  .nav_phone {
+    width: 40svw;
+  }
+
+  .hamburger .bar {
+    background-color: #000;
+  }
+
+  @media (min-height: 9svh) {
+    .nav_phone {
+      transform: scale(calc(9svh / 3.2rem * 2));
+    }
+  }
+
+  @media (min-height: 10svw) {
+    .nav_phone {
+      transform: scale(calc(10svw / 3.2rem * 2.666));
+    }
   }
 }
