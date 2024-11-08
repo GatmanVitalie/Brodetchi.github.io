@@ -1,0 +1,65 @@
+.section-title {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #000000;
+    font-family: PlayfairDisplay, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s, filter 0.3s; /* Faster transition */
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Let the grid item take the necessary height */
+}
+
+.grid-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.grid-image {
+    width: 100%;
+    height: 50%; /* Control the size of the image */
+    object-fit: cover;
+}
+
+.grid-title {
+    color: #000000;
+    font-size: 1.4em;
+    margin: 10px 0 5px;
+    font-family: Playfair Display, sans-serif;
+    font-weight: 800;
+}
+
+.grid-text {
+    color: white;
+    padding: 15px 25px; /* Reduced padding to avoid extra space */
+    background-color: #0A1319;
+    border-radius: 0 0 10px 10px; /* Rounded corners only at the bottom */
+    margin: 0; /* Remove any margin to avoid extra white space */
+    font-family: Playfair Display, sans-serif;
+}
+
+/* Blur and zoom effect only on non-hovered grid items */
+.grid-container:hover .grid-item:not(:hover) {
+    filter: blur(1px);
+    transform: scale(0.95);
+    transition: transform 0.3s, filter 0.3s; /* Faster transition */
+}
