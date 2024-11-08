@@ -122,7 +122,7 @@
   font-family: Playfair Display, sans-serif;
   font-weight: 500;
   text-decoration: none; /* Remove default underline */
-  text-shadow: 2.5px 2.5px 5px black;
+  /* text-shadow: 2.5px 2.5px 5px black; */
 }
 
 .up_nav_but a:hover {
@@ -196,7 +196,7 @@
   font-family: Roboto Slab, serif !important;
   font-weight: 400;
   font-size: 1rem;
-  text-shadow: 2px 2px 4px #000000;
+  text-shadow: 2px 2px 4px #000000a7;
 }
 
 .right_nav_but {
