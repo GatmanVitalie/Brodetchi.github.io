@@ -19,3 +19,8 @@ button
 {
     border: 0;
 }
+
+main {
+    flex: 1;  /* Ensures the main content takes up the remaining space */
+    padding-bottom: 50px;  /* Adds space so the footer doesn't overlap */
+}
