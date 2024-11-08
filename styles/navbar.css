@@ -83,7 +83,6 @@
 .logo img {
   object-fit: cover;
   width: 88%;
-  user-drag: none; /* For most modern browsers */
   -webkit-user-drag: none; /* For WebKit browsers (Chrome, Safari) */
   pointer-events: auto; /* Ensure the image is clickable */
 }
@@ -250,14 +249,12 @@
 }
 
 .search_button img {
-  /* Prevent the image from being draggable */
-  user-drag: none; /* Ensures the image can't be dragged */
-  -webkit-user-drag: none; /* For webkit browsers (Chrome, Safari) */
-  pointer-events: auto; /* Ensures the image is still clickable */
+  -webkit-user-drag: none;
+  pointer-events: auto;
 }
 
 .search_input {
-  display: flex; /* Ascuns implicit */
+  display: flex; 
   position: relative;
   left: 7.5%;
   width: 70%;
