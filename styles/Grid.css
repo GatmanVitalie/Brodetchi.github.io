@@ -37,8 +37,8 @@
 }
 
 .grid-image {
-    width: 100%;
-    height: 50%; /* Control the size of the image */
+    width: 294.750px;
+    height: 218.875px; /* Control the size of the image */
     object-fit: cover;
     -webkit-user-drag: none; /* Prevent dragging of the image in WebKit browsers */
     user-select: none; /* Prevent selection of the image */
