@@ -33,28 +33,28 @@
 }
 
 .navbar a {
-    color: white;
-    position: relative;
-    text-decoration: none; /* Remove default underline */
-  }
-  
-  .navbar a:hover {
-    text-decoration: underline; /* Add simple underline on hover */
-    text-decoration-color: white; /* Ensure the underline is white */
-  }
-  
-  .down_nav_but a {
-    font-size: 1.29rem;
-    border-left: 2px solid #fff;
-    padding: 0 0.5rem;
-    text-align: center;
-    color: white;
-    position: relative;
-  }
+  color: white;
+  position: relative;
+  text-decoration: none; /* Remove default underline */
+}
 
-  .down_nav_but a:first-child {
-    border-left: none; /* Remove the left border from the first link */
-  }
+.navbar a:hover {
+  text-decoration: underline; /* Add simple underline on hover */
+  text-decoration-color: white; /* Ensure the underline is white */
+}
+
+.down_nav_but a {
+  font-size: 1.29rem;
+  border-left: 2px solid #fff;
+  padding: 0 0.5rem;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.down_nav_but a:first-child {
+  border-left: none; /* Remove the left border from the first link */
+}
 
 .down_nav_but a {
   font-size: 1.29rem;
@@ -70,24 +70,24 @@
 }
 
 .logo {
-    background-color: rgba(255, 255, 255, 0);
-    width: 21rem;
-    height: 100%;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    transition: all ease 400ms;
-  }
-  
-  .logo img {
-    object-fit: cover;
-    width: 88%;
-    /* Prevent the image from being draggable */
-    user-drag: none; /* For most modern browsers */
-    -webkit-user-drag: none; /* For WebKit browsers (Chrome, Safari) */
-    pointer-events: auto; /* Ensure the image is clickable */
-  }
+  background-color: rgba(255, 255, 255, 0);
+  width: 21rem;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  transition: all ease 400ms;
+}
+
+.logo img {
+  object-fit: cover;
+  width: 88%;
+  /* Prevent the image from being draggable */
+  user-drag: none; /* For most modern browsers */
+  -webkit-user-drag: none; /* For WebKit browsers (Chrome, Safari) */
+  pointer-events: auto; /* Ensure the image is clickable */
+}
 
 .nav_but {
   height: 5.5rem;
@@ -100,66 +100,65 @@
 }
 
 .up_nav_but {
-    background-color: #ffffff68;
-    color: #ffffff;
-    width: 38rem;
-    padding: 0.55rem 1rem;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    align-content: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 1rem;
-    overflow: hidden;
-    transition: all 400ms ease;
-  
-    /* Apply user-select none to entire container to override potential inheritance */
-    user-select: none;
-  }
-  
-  .up_nav_but a {
-    margin: 0 0.3rem;
-    font-size: 0.9rem;
-    font-family: Montserrat, sans-serif;
-    font-weight: 500;
-    text-decoration: none; /* Remove default underline */
-  }
-  
-  .up_nav_but a:hover {
-    text-decoration: underline; /* Apply underline on hover */
-    text-decoration-color: white; /* Set the color of the underline */
-    text-decoration-thickness: 1.5px; /* Set the thickness of the underline */
-  }
-  
-  .up_nav_but img {
-    object-fit: cover;
-    height: 1.1rem;
-    width: 1.1rem;
-    filter: invert(100%);
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: center;
-    
-    /* Prevent image from being selected */
-    user-select: none !important; /* Force disable selection */
-    pointer-events: none; /* Optional: disable click interaction */
-  }
-  
-  .up_nav_but button {
-    background-color: #ffffff00;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    padding: 0;
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
-  
+  background-color: #ffffff68;
+  color: #ffffff;
+  width: 38rem;
+  padding: 0.55rem 1rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1rem;
+  overflow: hidden;
+  transition: all 400ms ease;
+
+  /* Apply user-select none to entire container to override potential inheritance */
+  user-select: none;
+}
+
+.up_nav_but a {
+  margin: 0 0.3rem;
+  font-size: 0.9rem;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  text-decoration: none; /* Remove default underline */
+}
+
+.up_nav_but a:hover {
+  text-decoration: underline; /* Apply underline on hover */
+  text-decoration-color: white; /* Set the color of the underline */
+  text-decoration-thickness: 1.5px; /* Set the thickness of the underline */
+}
+
+.up_nav_but img {
+  object-fit: cover;
+  height: 1.1rem;
+  width: 1.1rem;
+  filter: invert(100%);
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+
+  /* Prevent image from being selected */
+  user-select: none !important; /* Force disable selection */
+  pointer-events: none; /* Optional: disable click interaction */
+}
+
+.up_nav_but button {
+  background-color: #ffffff00;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding: 0;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
 
 .down_nav_but {
   z-index: 1;
@@ -192,15 +191,15 @@
 }
 
 .left_nav_but {
-    width: 39.8rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    align-content: center;
-    font-family: 'Cormorant Garamond', serif !important;
-    font-weight: 500;
-    font-size: 1rem;
+  width: 39.8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  align-content: center;
+  font-family: "Cormorant Garamond", serif !important;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 .right_nav_but {
@@ -239,25 +238,25 @@
 }
 
 .search_button {
-    background-color: #ffffff;
-    color: #000000;
-    border-radius: 100px;
-    height: 100%;
-    width: 100%;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: relative;
-    align-content: center;
-  }
-  
-  .search_button img {
-    /* Prevent the image from being draggable */
-    user-drag: none; /* Ensures the image can't be dragged */
-    -webkit-user-drag: none; /* For webkit browsers (Chrome, Safari) */
-    pointer-events: auto; /* Ensures the image is still clickable */
-  }
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 100px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  align-content: center;
+}
+
+.search_button img {
+  /* Prevent the image from being draggable */
+  user-drag: none; /* Ensures the image can't be dragged */
+  -webkit-user-drag: none; /* For webkit browsers (Chrome, Safari) */
+  pointer-events: auto; /* Ensures the image is still clickable */
+}
 
 .search_input {
   display: flex; /* Ascuns implicit */
@@ -309,5 +308,29 @@
 }
 
 .scrolled .down_nav_but a:first-child {
-    border-left: none; /* Remove the left border from the first link */
+  border-left: none; /* Remove the left border from the first link */
+}
+
+/*Telefon        */
+@media only screen and (max-width: 1164px) {
+  .nav_but {
+    display: none;
   }
+
+  .navbar_container 
+  {
+    background-color: #fff;
+    height: 4rem;
+  }
+
+  .navbar
+  {
+    align-content: center;
+  }
+
+  .logo
+  {
+    height: 3rem;
+    width: 9rem;
+  }
+}
