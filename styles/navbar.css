@@ -83,7 +83,6 @@
 .logo img {
   object-fit: cover;
   width: 88%;
-  /* Prevent the image from being draggable */
   user-drag: none; /* For most modern browsers */
   -webkit-user-drag: none; /* For WebKit browsers (Chrome, Safari) */
   pointer-events: auto; /* Ensure the image is clickable */
@@ -114,8 +113,6 @@
   gap: 1rem;
   overflow: hidden;
   transition: all 400ms ease;
-
-  /* Apply user-select none to entire container to override potential inheritance */
   user-select: none;
 }
 
@@ -125,6 +122,7 @@
   font-family: Playfair Display, sans-serif;
   font-weight: 500;
   text-decoration: none; /* Remove default underline */
+  text-shadow: 2.5px 2.5px 5px black;
 }
 
 .up_nav_but a:hover {
@@ -142,11 +140,9 @@
   align-items: center;
   flex-wrap: nowrap;
   flex-direction: row;
-  justify-content: center;
-
-  /* Prevent image from being selected */
+  justify-content: center;  
   user-select: none !important; /* Force disable selection */
-  pointer-events: none; /* Optional: disable click interaction */
+  pointer-events: none;
 }
 
 .up_nav_but button {
@@ -200,6 +196,7 @@
   font-family: Roboto Slab, serif !important;
   font-weight: 400;
   font-size: 1rem;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .right_nav_but {
