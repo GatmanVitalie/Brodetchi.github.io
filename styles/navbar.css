@@ -312,25 +312,28 @@
   border-left: none; /* Remove the left border from the first link */
 }
 
-/*Telefon        */
-@media only screen and (max-width: 1164px) {
+
+
+
+/* Ecran mic    */
+@media only screen and (max-width: 1200px) {
   .nav_but {
     display: none;
   }
 
-  .navbar_container 
-  {
+  .navbar {
+    align-content: center;
+  }
+}
+
+/*Telefon        */
+@media only screen and (max-width: 1000px) {
+  .navbar_container {
     background-color: #fff;
     height: 4rem;
   }
 
-  .navbar
-  {
-    align-content: center;
-  }
-
-  .logo
-  {
+  .logo {
     height: 3rem;
     width: 9rem;
   }
