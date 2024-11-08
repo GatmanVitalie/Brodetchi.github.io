@@ -42,11 +42,11 @@
     font-size: 1.15rem;
     line-height: 1.5;
     width: 100%; 
-    font-family: "Playwrite GB", sans-serif;
+    font-family: Playfair Display, sans-serif;
 }
 
 .center-heading {
-    font-family: "Playwrite GB", sans-serif; 
+    font-family: Playfair Display, sans-serif; 
     font-size: 56px;
     font-weight: 700;
     text-align: center;
