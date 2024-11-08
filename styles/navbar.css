@@ -296,11 +296,13 @@
 }
 
 .scrolled .down_nav_but a {
-  color: #000;
+  color: #000; /* Text color becomes black */
   font-size: 1.3rem;
   border-left: 2px solid #000;
   text-shadow: 2px 2px 0px #00000000;
   transition: all ease-in-out 900ms;
+  text-shadow: none;
+  text-decoration-color: #000; /* Ensure the underline stays black */
 }
 
 .scrolled .down_nav_but a:first-child {
