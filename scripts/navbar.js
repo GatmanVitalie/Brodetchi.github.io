@@ -14,10 +14,22 @@ if (window.innerWidth > 1000) {
 }
 
 // Adaugă un eveniment care detectează redimensionarea ferestrei și reatașează evenimentul de scroll când este cazul
-window.addEventListener("resize", function() {
+window.addEventListener("resize", function () {
     if (window.innerWidth > 1000) {
         window.addEventListener("scroll", handleScroll);
     } else {
         window.removeEventListener("scroll", handleScroll);
     }
 });
+
+
+
+
+function toggleMenu() {
+    const hamburger = document.querySelector('.hamburger');
+    hamburger.classList.toggle('active');
+    if (hamburger.classList.contains('active')) {
+        console.log("Hamburger button activated");
+    }
+}
+

@@ -140,7 +140,7 @@
   align-items: center;
   flex-wrap: nowrap;
   flex-direction: row;
-  justify-content: center;  
+  justify-content: center;
   user-select: none !important; /* Force disable selection */
   pointer-events: none;
 }
@@ -310,7 +310,73 @@
 }
 
 
+/* Telefon */
+.nav_phone {
+  height: 72.6%;
+  margin-right: 4.1%;
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: center;
+  flex-direction: row-reverse;
+  transition: all ease 600ms;
+}
 
+.scrolled .nav_phone {
+  /* height: 80%; */
+  transform: scale(0.87);
+  margin-right: 2%;
+  transition: all ease 400ms;
+}
+
+/* Hamburger button */
+/* Hamburger button styles */
+.hamburger {
+  position: relative;
+  /* top: 2.5rem; */
+  /* right: 3rem; */
+  width: 3.2rem;
+  height: 2.5rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 11;
+  transition: all 0.3s ease;
+}
+
+.hamburger .bar {
+  height: 12%;
+  width: 100%;
+  background-color: white;
+  border-radius: 200px;
+  transform-origin: top left;
+  transition: all 0.3s ease;
+}
+
+.scrolled .hamburger .bar {
+ color: #000;
+}
+
+.hamburger .bar:nth-child(3) {
+  transform-origin: bottom left;
+}
+
+/* Active state for animation */
+.hamburger.active .bar:nth-child(1) {
+  transform: rotate(45deg);
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.hamburger.active {
+  transform: translate(0.508374rem);
+}
 
 /* Ecran mic    */
 @media only screen and (max-width: 1200px) {
@@ -320,6 +386,14 @@
 
   .navbar {
     align-content: center;
+  }
+
+  .navbar::after {
+    align-content: center;
+  }
+
+  .hamburger {
+    display: flex;
   }
 }
 
