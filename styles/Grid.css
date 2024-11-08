@@ -4,7 +4,9 @@
     margin-top: 20px;
     margin-bottom: 20px;
     color: #000000;
-    font-family: PlayfairDisplay, sans-serif;
+    font-family: Playfair Display, sans-serif;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .grid-container {
@@ -19,7 +21,7 @@
     background-color: #f8f8f8;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 5.5px 5.5px 12px rgba(0, 0, 0, 0.445);
     transition: transform 0.3s, box-shadow 0.3s, filter 0.3s; /* Faster transition */
     text-align: center;
     cursor: pointer;
@@ -45,9 +47,10 @@
 .grid-title {
     color: #000000;
     font-size: 1.4em;
-    margin: 10px 0 5px;
+    margin: 10px 0 10px;
     font-family: Playfair Display, sans-serif;
     font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .grid-text {
@@ -57,6 +60,7 @@
     border-radius: 0 0 10px 10px; /* Rounded corners only at the bottom */
     margin: 0; /* Remove any margin to avoid extra white space */
     font-family: Playfair Display, sans-serif;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.1);
 }
 
 /* Blur and zoom effect only on non-hovered grid items */
