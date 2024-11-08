@@ -33,3 +33,29 @@ function toggleMenu() {
     }
 }
 
+
+
+
+
+// Scale nav_phone
+const nav_phone = document.querySelector('.nav_phone');
+const navbar_container = document.querySelector('.navbar_container');
+
+function adjustScale() {
+    if (window.innerWidth <= 1000) {
+        const navbarHeight = navbar_container.offsetHeight;
+        const navphoneHeight = nav_phone.offsetHeight;
+        console.log(navbarHeight, " ", navphoneHeight, "    ");
+
+        let scaleFactor;
+
+        scaleFactor = (navphoneHeight / navbarHeight) * 0.7;
+        nav_phone.style.transform = `scale(${scaleFactor})`;
+    }
+}
+
+// Apelează funcția la încărcare și la redimensionare
+window.addEventListener('load', adjustScale);
+window.addEventListener('resize', adjustScale);
+
+
