@@ -254,7 +254,7 @@
 }
 
 .search_input {
-  display: flex; 
+  display: flex;
   position: relative;
   left: 7.5%;
   width: 70%;
@@ -299,13 +299,13 @@
   color: #000;
   font-size: 1.3rem;
   border-left: 2px solid #000;
+  text-shadow: 2px 2px 0px #00000000;
   transition: all ease-in-out 900ms;
 }
 
 .scrolled .down_nav_but a:first-child {
   border-left: none; /* Remove the left border from the first link */
 }
-
 
 /* Telefon */
 .nav_phone {
@@ -321,7 +321,7 @@
 }
 
 .scrolled .nav_phone {
-  /* height: 80%; */
+  height: 80%;
   transform: scale(0.87);
   margin-right: 2%;
   transition: all ease 400ms;
@@ -350,10 +350,12 @@
   border-radius: 200px;
   transform-origin: top left;
   transition: all 0.3s ease;
+  transition: all ease 600ms;
 }
 
 .scrolled .hamburger .bar {
- color: #000;
+  background-color: #000;
+  transition: all ease 400ms; /*scroled*/
 }
 
 .hamburger .bar:nth-child(3) {
@@ -383,6 +385,7 @@
 
   .navbar {
     align-content: center;
+    align-items: center;
   }
 
   .navbar::after {
