@@ -11,4 +11,5 @@ video {
     overflow: hidden;
     height: 100svh;
     width: 100%;
+    box-shadow: 0px 2px 9px 8px #00000038;
 }
