@@ -354,7 +354,7 @@
   border-radius: 200px;
   transform-origin: top left;
   transition: all 0.3s ease;
-  transition: all ease 600ms;
+  /* transition: all ease 600ms; */
 }
 
 .scrolled .hamburger .bar {
@@ -389,6 +389,10 @@
 
   .navbar {
     align-content: center;
+    /*  */
+  }
+
+  .scrolled .navbar {
     align-items: center;
   }
 
@@ -419,8 +423,7 @@
     object-fit: cover;
   }
 
-  .logo img
-  {
+  .logo img {
     width: 100%;
     height: 100%;
   }

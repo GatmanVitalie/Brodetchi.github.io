@@ -48,11 +48,15 @@ function adjustScale() {
         var navphoneHeight = nav_phone.offsetHeight;
 
         // Calculează scaleFactor ca 70% din înălțimea navbarului, raportat la înălțimea butonului nav_phone
-        let scaleFactor = (navbarHeight * 0.65) / navphoneHeight;
+        let scaleFactor = (navbarHeight * 0.7) / navphoneHeight;
 
         // Aplică transformarea de scalare
         nav_phone.style.transform = `scale(${scaleFactor})`;
         console.log("Factor de scalare:", scaleFactor);
+    }
+    else
+    {
+        nav_phone.style.transform = `scale(${0.87})`;
     }
 }
 
