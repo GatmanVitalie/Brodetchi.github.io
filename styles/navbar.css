@@ -406,6 +406,8 @@
 }
 
 /*Telefon        */
+
+
 @media screen and (max-width: 1000px) {
   .navbar_container {
     background-color: #fff;
@@ -439,3 +441,37 @@
     background-color: #000;
   }
 }
+
+
+
+@media screen and (max-width: 1200px) {
+  .nav_but {
+    display: none;
+  }
+
+  .navbar {
+    align-content: center;
+    /*  */
+  }
+
+  .scrolled .navbar {
+    align-items: center;
+  }
+
+  .navbar::after {
+    align-content: center;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+
+@media screen and (max-width: 1300px) {
+  .up_nav_but {
+    border-bottom-right-radius: 0px;
+  }
+}
+
+
