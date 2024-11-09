@@ -45,12 +45,17 @@ function adjustScale() {
     if (window.innerWidth <= 1000) {
         const navbarHeight = navbar_container.offsetHeight;
         const navphoneHeight = nav_phone.offsetHeight;
-        console.log(navbarHeight, " ", navphoneHeight, "    ");
+        
 
         let scaleFactor;
 
         scaleFactor = (navbarHeight / navphoneHeight) * 0.7;
         nav_phone.style.transform = `scale(${scaleFactor})`;
+
+        navbarHeight = navbar_container.offsetHeight;
+        navphoneHeight = nav_phone.offsetHeight;
+        console.log(navbarHeight / navphoneHeight, ' ');
+        
     }
 }
 
