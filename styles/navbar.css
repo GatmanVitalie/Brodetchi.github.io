@@ -426,7 +426,10 @@
   }
 
   .nav_phone {
+    height: 100%;
     width: 50%;
+    /* transform: scale(1); */
+    transform-origin: center right;
   }
 
   .hamburger .bar {

@@ -38,25 +38,21 @@ function toggleMenu() {
 
 
 // Scale nav_phone
-const nav_phone = document.querySelector('.nav_phone');
 const navbar_container = document.querySelector('.navbar_container');
+const nav_phone = document.querySelector('.nav_phone');
+
 
 function adjustScale() {
     if (window.innerWidth <= 1000) {
         var navbarHeight = navbar_container.offsetHeight;
         var navphoneHeight = nav_phone.offsetHeight;
-        
 
-        let scaleFactor;
+        // Calculează scaleFactor ca 70% din înălțimea navbarului, raportat la înălțimea butonului nav_phone
+        let scaleFactor = (navbarHeight * 0.65) / navphoneHeight;
 
-        scaleFactor = (navbarHeight / navphoneHeight) * 0.7;
+        // Aplică transformarea de scalare
         nav_phone.style.transform = `scale(${scaleFactor})`;
-
-        navbarHeight = navbar_container.offsetHeight;
-        navphoneHeight = nav_phone.offsetHeight;
-        nav_phone.style.transform = `scale(${scaleFactor})`;
-        console.log(navphoneHeight / navbarHeight, ' ');
-        
+        console.log("Factor de scalare:", scaleFactor);
     }
 }
 
