@@ -49,7 +49,7 @@ function adjustScale() {
 
         let scaleFactor;
 
-        scaleFactor = (navphoneHeight / navbarHeight) * 0.7;
+        scaleFactor = (navbarHeight / navphoneHeight) * 0.7;
         nav_phone.style.transform = `scale(${scaleFactor})`;
     }
 }

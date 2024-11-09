@@ -411,9 +411,16 @@
 
   .logo {
     min-height: 98%;
-    max-width: 30svw;
+    width: auto;
+    max-width: 24svw;
+    height: 100%;
     /* min-width: 18svh; */
     max-height: 10svw;
+  }
+
+  .logo img
+  {
+    width: 100%;
   }
 
   .nav_phone {
