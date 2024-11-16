@@ -92,7 +92,7 @@
 }
 
 .video-text-overlay .text-content {
-    max-width: 30%; /* Limit the width of the text block to 30% for a slimmer appearance */
+    max-width: 20rem; /* Limit the width of the text block to 30% for a slimmer appearance */
     font-weight: normal; /* Remove boldness, making text thinner */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Add text shadow */
 }

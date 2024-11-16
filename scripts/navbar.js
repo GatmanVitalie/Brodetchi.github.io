@@ -56,6 +56,8 @@ function adjustScale() {
     }
 }
 
+
+
 // Apelează funcția la încărcare și la redimensionare
 window.addEventListener('load', adjustScale);
 window.addEventListener('resize', adjustScale);
