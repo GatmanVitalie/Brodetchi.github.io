@@ -1,14 +1,111 @@
-video {
-    object-fit: cover; /* Umple ecranul fără deformare */
-    width: 100%;
-    height: 100%;
-}
-
-.video-container
-{
+.video-container {
+    position: relative; /* Allows absolute positioning for children */
     margin: 0;
     padding: 0;
     overflow: hidden;
-    height: 100svh;
+    height: 100svh; /* Full viewport height */
     width: 100%;
+    box-shadow: 0px 2px 9px 8px #00000038;
+}
+
+.video-container video {
+    object-fit: cover; /* Fill the container without distortion */
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Keep video behind the text */
+}
+
+.video-text-overlay {
+    position: absolute; /* Overlay on top of the video */
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover full width of the container */
+    height: 100%; /* Cover full height of the container */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text to the left */
+    padding-left: 3rem; /* Move text more to the right (adjust from 2rem to 3rem) */
+    background: rgba(0, 0, 0, 0.4); /* Optional: semi-transparent dark overlay */
+    z-index: 2; /* Place text above the video */
+    color: white;
+    font-family: "Playfair Display", sans-serif; /* Apply Playfair font */
+}
+
+.video-text-overlay .text-content {
+    max-width: 30%; /* Limit the width of the text block to 30% for a slimmer appearance */
+    font-weight: normal; /* Remove boldness, making text thinner */
+}
+
+.video-text-overlay .text-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.video-text-overlay .text-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.video-text-overlay .text-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: white; /* White background for the first button */
+    color: black;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 1px solid white;
+    transition: background 0.3s;
+    font-weight: 800;
+    box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, 0.3); /* Add drop shadow to button */
+}
+
+.video-text-overlay .text-content .btn_2 {
+    display: inline-block;
+    padding: 10px 20px;
+    background: transparent; /* Transparent background for the second button */
+    color: white;
+    border: 3px solid white; /* Thick white border */
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: 800;
+    margin-left: 1rem; /* Add space between buttons */
+    transition: background 0.3s, color 0.3s, font-weight 0.3s;
+    width: 6.83rem;
+    height: 1.56rem;
+    padding-right: 0;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, 0.3); /* Add drop shadow to second button */
+}
+
+.video-text-overlay .text-content .btn:hover {
+    background: #ebebeb; /* Slightly darker on hover */
+    color: rgb(2, 2, 2);
+}
+
+.video-text-overlay .text-content .btn_2:hover {
+    background: #ebebeb; /* White background on hover */
+    color: black; /* Black text on hover */
+    font-weight: 800;
+}
+
+.video-text-overlay .text-content {
+    max-width: 30%; /* Limit the width of the text block to 30% for a slimmer appearance */
+    font-weight: normal; /* Remove boldness, making text thinner */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Add text shadow */
+}
+
+.video-text-overlay .text-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Apply shadow to headings */
+}
+
+.video-text-overlay .text-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);/* Apply shadow to paragraphs */
 }
