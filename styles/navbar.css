@@ -405,14 +405,19 @@
   }
 }
 
-/*Telefon        */
-
-
+/* Telefon */
 @media screen and (max-width: 1000px) {
   .navbar_container {
     background-color: #fff;
     height: 10svw;
     min-height: 9svh;
+    position: fixed;
+  }
+
+  .video-container
+  {
+    margin-top: 10svw;
+    height: 90%;
   }
 
   .logo {
@@ -423,6 +428,10 @@
     /* min-width: 18svh; */
     max-height: 10svw;
     object-fit: cover;
+    display: flex;
+    align-items: center;
+    object-fit: cover;
+    align-content: center;
   }
 
   .logo img {
@@ -442,8 +451,7 @@
   }
 }
 
-
-
+/* Ecran mic calculator */
 @media screen and (max-width: 1200px) {
   .nav_but {
     display: none;
@@ -452,6 +460,7 @@
   .navbar {
     align-content: center;
     /*  */
+    align-items: center;
   }
 
   .scrolled .navbar {
@@ -467,11 +476,9 @@
   }
 }
 
-
+/* Contur la buton schimbat */
 @media screen and (max-width: 1300px) {
   .up_nav_but {
     border-bottom-right-radius: 0px;
   }
 }
-
-

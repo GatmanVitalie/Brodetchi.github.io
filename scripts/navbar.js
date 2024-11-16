@@ -1,17 +1,14 @@
 // Funcția care gestionează adăugarea sau eliminarea clasei "scrolled"
 function handleScroll() {
     const navbar = document.querySelector(".navbar_container");
-    if (window.scrollY > 1) {
+    if (window.innerWidth > 1000 && window.scrollY > 1) {
         navbar.classList.add("scrolled");
     } else {
         navbar.classList.remove("scrolled");
     }
 }
 
-// Atașează evenimentul de scroll doar dacă lățimea ecranului este peste 1000px
-if (window.innerWidth > 1000) {
-    window.addEventListener("scroll", handleScroll);
-}
+window.addEventListener("scroll", handleScroll);
 
 // Adaugă un eveniment care detectează redimensionarea ferestrei și reatașează evenimentul de scroll când este cazul
 window.addEventListener("resize", function () {
@@ -54,8 +51,7 @@ function adjustScale() {
         nav_phone.style.transform = `scale(${scaleFactor})`;
         console.log("Factor de scalare:", scaleFactor);
     }
-    else
-    {
+    else {
         nav_phone.style.transform = `scale(${0.87})`;
     }
 }
