@@ -81,14 +81,15 @@
 }
 
 .video-text-overlay .text-content .btn:hover {
-    background: #ebebeb; /* Slightly darker on hover */
+    background: #ebebebf6; /* Slightly darker on hover */
     color: rgb(2, 2, 2);
 }
 
 .video-text-overlay .text-content .btn_2:hover {
-    background: #ebebeb; /* White background on hover */
+    background: #ebebebf6; /* White background on hover */
     color: black; /* Black text on hover */
     font-weight: 800;
+    border: 3px solid #ebebebf6; 
 }
 
 .video-text-overlay .text-content {
