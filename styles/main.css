@@ -1,10 +1,9 @@
-body{
+/* body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     background-color: f4f4f4;
     display: flex;
-    /* padding-top: 60px; */
     justify-content: center;
     align-items: center;
 }
@@ -21,6 +20,6 @@ button
 }
 
 main {
-    flex: 1;  /* Ensures the main content takes up the remaining space */
-    padding-bottom: 50px;  /* Adds space so the footer doesn't overlap */
-}
+    flex: 1;  
+    padding-bottom: 50px;  
+} */

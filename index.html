@@ -5,6 +5,8 @@
     <!-- Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Brodetchi</title>
 
     <!-- Linkuri la css -->
@@ -21,7 +23,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
 
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&display=swap"
@@ -38,54 +41,141 @@
 
 
     <!-- navbar (navbar.css) -->
-    <div class="navbar_container">
-        <div class="navbar">
-            <div class="logo">
-                <img src="images/brodetchi2.png" alt="Logo">
-            </div>
-            <div class="nav_but">
-                <div class="up_nav_but">
-                    <button class="tel"><img src="images/Phone.png"> <a href="tel:+079040510">+223 334 07</a> </button>
-                    <button class="mail"><img src="images/email.png"><a
-                            href="mailto:brodethi@mail.com">brodethi@mail.com</a> </button>
-                    <button class="location"><img src="images/pin.png"><a
-                            href="https://maps.app.goo.gl/4DowU7cxdf6hoVbk8">Str. Constantin Negruzzi,
-                            Orhei</a></button>
-                </div>
+    <header>
+        <div class="container">
+            <input type="checkbox" name="" id="check">
 
-                <div class="down_nav_but">
-                    <div class="left_nav_but">
-                        <a href="#home">Acasă</a>
-                        <a href="#about">Despre</a>
-                        <a href="#services">Servicii</a>
-                        <a href="#catalog">Catalog</a>
-                        <a href="#contact">Contacte</a>
-                    </div>
-                    <div class="right_nav_but">
-                        <button class="search_button" onclick="showSearchInput()">
-                            <img src="images/magnifying-glass-svgrepo-com (1).svg" alt="search-icon" />
-                            <input type="text" class="search_input" placeholder="Scrie aici..." onfocus="clearText()"
-                                onblur="restoreText()">
-                        </button>
-                    </div>
-
-                </div>
+            <div class="logo-container">
+                <h3 class="logo">Brand<span>Name</span></h3>
             </div>
 
-            <!-- Pune aici hamburger butonul -->
-            <div class="nav_phone">
-                <div class="hamburger" onclick="toggleMenu()">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
+            <div class="nav-btn">
+                <div class="nav-links">
+                    <ul>
+                        <li class="nav-link" style="--i: .6s">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="nav-link" style="--i: .85s">
+                            <a href="#">Menu <i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="#">Link 1</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Link 2</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Link 3<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Link 1</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Link 2</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Link 3</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">More<i class="fas fa-caret-down"></i></a>
+                                                    <div class="dropdown second">
+                                                        <ul>
+                                                            <li class="dropdown-link">
+                                                                <a href="#">Link 1</a>
+                                                            </li>
+                                                            <li class="dropdown-link">
+                                                                <a href="#">Link 2</a>
+                                                            </li>
+                                                            <li class="dropdown-link">
+                                                                <a href="#">Link 3</a>
+                                                            </li>
+                                                            <div class="arrow"></div>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <div class="arrow"></div>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Link 4</a>
+                                    </li>
+                                    <div class="arrow"></div>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-link" style="--i: 1.1s">
+                            <a href="#">Services<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="#">Link 1</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Link 2</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Link 3<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Link 1</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Link 2</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Link 3</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">More<i class="fas fa-caret-down"></i></a>
+                                                    <div class="dropdown second">
+                                                        <ul>
+                                                            <li class="dropdown-link">
+                                                                <a href="#">Link 1</a>
+                                                            </li>
+                                                            <li class="dropdown-link">
+                                                                <a href="#">Link 2</a>
+                                                            </li>
+                                                            <li class="dropdown-link">
+                                                                <a href="#">Link 3</a>
+                                                            </li>
+                                                            <div class="arrow"></div>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <div class="arrow"></div>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Link 4</a>
+                                    </li>
+                                    <div class="arrow"></div>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-link" style="--i: 1.35s">
+                            <a href="#">About</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="log-sign" style="--i: 1.8s">
+                    <a href="#" class="btn transparent">Log in</a>
+                    <a href="#" class="btn solid">Sign up</a>
                 </div>
             </div>
 
-
+            <div class="hamburger-menu-container">
+                <div class="hamburger-menu">
+                    <div></div>
+                </div>
+            </div>
         </div>
-
-    </div>
-    </div>
+    </header>
 
     <!-- Corpul -->
     <section class="content">
@@ -103,13 +193,15 @@
                 <source src="images/0000-0482.mp4" type="video/mp4">
                 Browserul tău nu suportă video HTML5.
             </video>
-        
+
             <!-- Add this text block -->
             <div class="video-text-overlay">
                 <div class="text-content">
                     <h2>Lorem Ipsum</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
                     <a href="#learn-more" class="btn">Learn More</a>
                     <a href="#learn-more" class="btn_2">Learn More</a>
@@ -121,10 +213,10 @@
         </div>
 
         <!-- Product Section -->
-         <!--
+        <!--
         <section class="product-section">
             <h2 class="center-heading">Produse Dulci</h2> --><!-- Title aligned center -->
-           <!-- <div class="product-container">
+        <!-- <div class="product-container">
 
                 <div class="slider" id="slider">
                     <div class="slide">
@@ -172,7 +264,8 @@
             <div class="grid-item">
                 <img src="images/covrig.webp" alt="Covrigi" class="grid-image" loading="lazy">
                 <h3 class="grid-title">Covrigi delicioși</h3>
-                <p class="grid-text">Covrigi aurii, crocanți la exterior și moi la interior, perfecți pentru orice moment.</p>
+                <p class="grid-text">Covrigi aurii, crocanți la exterior și moi la interior, perfecți pentru orice
+                    moment.</p>
             </div>
             <div class="grid-item">
                 <img src="images/colac.webp" alt="Colaci" class="grid-image" loading="lazy">
@@ -189,29 +282,34 @@
             <div class="grid-item">
                 <img src="images/Tort cu fluturi.webp" alt="Torturi" class="grid-image" loading="lazy">
                 <h3 class="grid-title">Torturi</h3>
-                <p class="grid-text">O selecție diversificată de torturi la comanda perfectă pentru evenimente speciale și gusturi variate.</p>
+                <p class="grid-text">O selecție diversificată de torturi la comanda perfectă pentru evenimente speciale
+                    și gusturi variate.</p>
             </div>
             <div class="grid-item">
                 <img src="images/rulada.webp" alt="Prăjituri și rulade" class="grid-image" loading="lazy">
                 <h3 class="grid-title">Prăjituri și rulade</h3>
-                <p class="grid-text">Eclere, rulade și profitroli cu creme rafinate, ideale pentru un moment dulce sau ocazii deosebite.</p>
+                <p class="grid-text">Eclere, rulade și profitroli cu creme rafinate, ideale pentru un moment dulce sau
+                    ocazii deosebite.</p>
             </div>
             <div class="grid-item">
                 <img src="images/babaneagra.webp" alt="Produse tradiționale" class="grid-image" loading="lazy">
                 <h3 class="grid-title">Produse tradiționale</h3>
-                <p class="grid-text">Specialități regionale, cum ar fi „Baba neagră”, păstrând autenticitatea și tradiția moldovenească.</p>
+                <p class="grid-text">Specialități regionale, cum ar fi „Baba neagră”, păstrând autenticitatea și
+                    tradiția moldovenească.</p>
             </div>
             <div class="grid-item">
                 <img src="images/croissant.webp" alt="Biscuiți și croissante" class="grid-image" loading="lazy">
                 <h3 class="grid-title">Biscuiți și croissante</h3>
-                <p class="grid-text">O gamă variată de biscuiți și croissante, perfecte pentru gustări rapide sau alături de cafea.</p>
+                <p class="grid-text">O gamă variată de biscuiți și croissante, perfecte pentru gustări rapide sau
+                    alături de cafea.</p>
             </div>
         </div>
-        
-        
+
+
 
     </section>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="scripts/slider.js" defer></script>
     <script src="scripts/search.js" defer></script>
     <script src="scripts/navbar.js" defer></script>
