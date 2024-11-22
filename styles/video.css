@@ -47,7 +47,7 @@
     margin-bottom: 1rem;
 }
 
-.video-text-overlay .text-content .btn {
+.video-text-overlay .text-content .video_btn {
     display: inline-block;
     padding: 10px 20px;
     background: white; /* White background for the first button */
@@ -60,7 +60,7 @@
     box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, 0.3); /* Add drop shadow to button */
 }
 
-.video-text-overlay .text-content .btn_2 {
+.video-text-overlay .text-content .video_btn_2 {
     display: inline-block;
     padding: 10px 20px;
     background: transparent; /* Transparent background for the second button */
@@ -80,12 +80,12 @@
     box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, 0.3); /* Add drop shadow to second button */
 }
 
-.video-text-overlay .text-content .btn:hover {
+.video-text-overlay .text-content .video_btn:hover {
     background: #ebebebf6; /* Slightly darker on hover */
     color: rgb(2, 2, 2);
 }
 
-.video-text-overlay .text-content .btn_2:hover {
+.video-text-overlay .text-content .video_btn_2:hover {
     background: #ebebebf6; /* White background on hover */
     color: black; /* Black text on hover */
     font-weight: 800;
