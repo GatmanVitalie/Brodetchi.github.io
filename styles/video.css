@@ -45,6 +45,7 @@
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1rem;
+    user-select: none;
 }
 
 .video-text-overlay .text-content .video_btn {
