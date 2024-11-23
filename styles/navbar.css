@@ -87,7 +87,7 @@ header section{
     /* aspect-ratio: 3.8/1; */
     overflow: hidden;
     margin-top: 2rem;
-    margin-left: min(3rem, 2svw);
+    margin-left: min(3rem, 10svw);
 }
 
 .logo img {
