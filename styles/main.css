@@ -12,6 +12,11 @@ body{
 {
     width: 100%;
     height: 7000px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
 }
 
 button
