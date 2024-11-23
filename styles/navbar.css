@@ -35,7 +35,6 @@ header section{
     height: calc(100vh - 3rem);
     width: 100%;
     background: url('bg.jpg') no-repeat top center / cover;
-    overflow: hidden;
 }
 
 .overlay{
@@ -88,6 +87,7 @@ header section{
     /* aspect-ratio: 3.8/1; */
     overflow: hidden;
     margin-top: 2rem;
+    margin-left: min(3rem, 2svw);
 }
 
 .logo img {
@@ -302,7 +302,7 @@ header section{
 .butons
 {
     height: 100%;
-    overflow: hidden;
+    
     width: 35rem;
     display: flex;
     flex-direction: column;
@@ -314,7 +314,7 @@ header section{
 {
     height: 3rem;
     width: 34rem;
-    overflow: hidden;
+    
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -328,7 +328,7 @@ header section{
     flex-wrap: wrap;
     flex-direction: row;
     gap: 1rem;
-    overflow: hidden;
+
     transition: all 400ms ease;
     user-select: none;
     border-bottom-left-radius: 5px;
@@ -510,5 +510,10 @@ header section{
         justify-content: flex-start;
         opacity: 0;
         transform: translateY(15px);
+    }
+
+    .contacts
+    {
+        display: none;
     }
 }
