@@ -30,12 +30,15 @@
     margin-top: 5mm !important;
     margin-bottom: -1mm;
     text-align: center;
-    background-color: blue;
+    background-color: #0A1319;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 20px;
   }
   
   .articole h2 {
     font-size: 1.7rem;
-    color: rgb(41, 41, 41);
+    color: black;
     margin-bottom: 0%;
     text-align: left;
     text-transform: uppercase;
@@ -65,7 +68,7 @@
   
   .articole a {
     font-size: 0.6cm;
-    color: rgb(41, 41, 41);
+    color: white;
     top: 0px;
     text-align: left;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
