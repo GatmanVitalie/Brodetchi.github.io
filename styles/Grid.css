@@ -29,17 +29,19 @@
   .text_holder {
     margin-top: 5mm !important;
     margin-bottom: -1mm;
+    text-align: center;
+    background-color: blue;
   }
   
   .articole h2 {
     font-size: 1.7rem;
     color: rgb(41, 41, 41);
     margin-bottom: 0%;
-    text-decoration: underline 0.8mm rgb(253, 200, 0);
     text-align: left;
     text-transform: uppercase;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     text-wrap: pretty;
+    text-align: center;
   }
   
   .image_holder {
