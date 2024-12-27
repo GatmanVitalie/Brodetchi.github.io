@@ -28,7 +28,9 @@
     background: rgba(0, 0, 0, 0.4); /* Optional: semi-transparent dark overlay */
     z-index: 2; /* Place text above the video */
     color: white;
-    font-family: "Playfair Display", sans-serif; /* Apply Playfair font */
+     font-family: "Roboto", sans-serif;
+     font-weight: 1000;
+     font-style: normal;
 }
 
 .video-text-overlay .text-content {
@@ -94,7 +96,7 @@
 }
 
 .video-text-overlay .text-content {
-    max-width: 20rem; /* Limit the width of the text block to 30% for a slimmer appearance */
+    max-width: 24rem; /* Limit the width of the text block to 30% for a slimmer appearance */
     font-weight: normal; /* Remove boldness, making text thinner */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Add text shadow */
 }
