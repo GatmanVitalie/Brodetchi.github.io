@@ -166,16 +166,17 @@ header button span {
 }
 
 .arrow {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 0.75rem;
+  height: 1.05rem;
   display: inline-block;
   position: relative;
-  margin: 0 1rem;
+  margin: 0 0 0 0.6rem;
+  transform: scale(1.5);
 }
 
 .arrow span {
   position: absolute;
-  width: 0.75rem;
+  width: 0.45rem;
   height: 0.1rem;
   background-color: #efefef;
   display: inline-block;
@@ -199,69 +200,5 @@ header button span {
 }
 
 .arrow.active span:last-of-type {
-  transform: rotate(45deg);
-}
-
-.arrow--l-r {
-  width: 1.25rem;
-  height: 1.25rem;
-  display: inline-block;
-  position: relative;
-  margin: 0 1rem;
-}
-
-.arrow--l-r span {
-  position: absolute;
-  height: 0.1rem;
-  background-color: #efefef;
-  transition: transform 0.2s ease;
-}
-
-.arrow--l-r span:nth-child(1),
-.arrow--l-r span:nth-child(2),
-.arrow--l-r span:nth-child(4),
-.arrow--l-r span:nth-child(5) {
-  width: 0.625rem;
-  top: 0.625rem;
-}
-
-.arrow--l-r span:nth-child(1) {
-  right: 0;
-  transform-origin: bottom right;
-}
-
-.arrow--l-r span:nth-child(2) {
-  right: 0;
-  transform-origin: top right;
-}
-
-.arrow--l-r span:nth-child(3) {
-  width: 1.25rem;
-  top: 0.625rem;
-}
-
-.arrow--l-r span:nth-child(4) {
-  left: 0;
-  transform-origin: bottom left;
-}
-
-.arrow--l-r span:nth-child(5) {
-  left: 0;
-  transform-origin: top left;
-}
-
-.arrow--l-r.left span:nth-child(4) {
-  transform: rotate(-45deg);
-}
-
-.arrow--l-r.left span:nth-child(5) {
-  transform: rotate(45deg);
-}
-
-.arrow--l-r.right span:nth-child(1) {
-  transform: rotate(-45deg);
-}
-
-.arrow--l-r.right span:nth-child(2) {
   transform: rotate(45deg);
 }
