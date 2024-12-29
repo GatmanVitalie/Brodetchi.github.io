@@ -25,7 +25,6 @@ function arange() {
 
 
 //Activare /desactivare
-// Servicii
 function setupToggle(button, div) {
     function toggleActive() {
         button.classList.toggle('active');
@@ -47,7 +46,7 @@ function setupToggle(button, div) {
         div.classList.add('active');
     });
 
-    button.addEventListener('mouseover', () => {
+    button.addEventListener('mouseenter', () => {
         button.classList.add('active');
         div.classList.add('active');
     });
