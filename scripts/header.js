@@ -1,63 +1,52 @@
-// Săgeata
-// $('header button').on('click', function () {
-//     $(this).toggleClass('active');
-// });
+// Verifică dacă dispozitivul este touch
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-// Declansatoare
-window.addEventListener('load', function () {
-    arange();
-});
-
-window.addEventListener("resize", function () {
-    arange();
-});
-
-
-// Aranjare la dropdown
-function arange() {
-    document.getElementById('servici_dd').style.left = document.getElementById('servici').getBoundingClientRect().left + 'px';
-    document.getElementById('servici_dd').style.top = document.getElementById('servici').getBoundingClientRect().bottom - 1 + 'px';
-
-    document.getElementById('produse_dd').style.left = document.getElementById('produse').getBoundingClientRect().left + 'px';
-    document.getElementById('produse_dd').style.top = document.getElementById('produse').getBoundingClientRect().bottom - 1 + 'px';
-}
-
-
-
-//Activare /desactivare
 function setupToggle(button, div) {
     function toggleActive() {
         button.classList.toggle('active');
         div.classList.toggle('active');
+        console.log('toggle');
     }
 
     function removeActive() {
         button.classList.remove('active');
         div.classList.remove('active');
+        console.log('remove');
     }
 
+    // Gestionare click
     button.addEventListener('click', (event) => {
         toggleActive();
         event.stopPropagation();
+        console.log('click');
     });
 
-    div.addEventListener('mouseover', () => {
-        button.classList.add('active');
-        div.classList.add('active');
-    });
+    if (!isTouchDevice) {
+        // Gestionare hover pentru mouse-only
+        div.addEventListener('mouseover', () => {
+            button.classList.add('active');
+            div.classList.add('active');
+            console.log('mouseover active');
+        });
 
-    button.addEventListener('mouseenter', () => {
-        button.classList.add('active');
-        div.classList.add('active');
-    });
+        button.addEventListener('mouseenter', () => {
+            button.classList.add('active');
+            div.classList.add('active');
+            console.log('mouseenter active');
+        });
 
-    document.addEventListener('mousemove', (event) => {
-        if (!button.contains(event.target) && !div.contains(event.target)) {
-            removeActive();
-        }
-    });
+        document.addEventListener('mousemove', (event) => {
+            if (!button.contains(event.target) && !div.contains(event.target)) {
+                removeActive();
+            }
+        });
+    }
 
+    // Închidere dropdown pe click în afara elementului
     document.addEventListener('click', () => {
+        removeActive();
+    });
+    document.addEventListener('touchstart', () => {
         removeActive();
     });
 }
@@ -72,3 +61,15 @@ setupToggle(
     document.getElementById('produse'),
     document.getElementById('produse_dd')
 );
+
+// Asigurare poziționare dropdown la resize sau load
+window.addEventListener('load', arange);
+window.addEventListener('resize', arange);
+
+function arange() {
+    document.getElementById('servici_dd').style.left = document.getElementById('servici').getBoundingClientRect().left + 'px';
+    document.getElementById('servici_dd').style.top = document.getElementById('servici').getBoundingClientRect().bottom - 1 + 'px';
+
+    document.getElementById('produse_dd').style.left = document.getElementById('produse').getBoundingClientRect().left + 'px';
+    document.getElementById('produse_dd').style.top = document.getElementById('produse').getBoundingClientRect().bottom - 1 + 'px';
+}

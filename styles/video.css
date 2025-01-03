@@ -1,115 +1,73 @@
 .video-container {
-    position: relative; /* Allows absolute positioning for children */
+    position: relative;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    height: 100svh; /* Full viewport height */
+    height: 100svh; 
     width: 100%;
-    box-shadow: 0px 2px 9px 8px #00000038;
+    background-color: black;
+    /* box-shadow: 0px 2px 9px 8px #00000038; */
 }
 
 .video-container video {
-    object-fit: cover; /* Fill the container without distortion */
+    object-fit: cover; 
     width: 100%;
     height: 100%;
-    z-index: 1; /* Keep video behind the text */
+    z-index: 1;
+    filter: opacity(0.7);
 }
-
 .video-text-overlay {
-    position: absolute; /* Overlay on top of the video */
-    top: 0;
-    left: 0;
-    width: 100%; /* Cover full width of the container */
-    height: 100%; /* Cover full height of the container */
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Align text to the left */
-    padding-left: 3rem; /* Move text more to the right (adjust from 2rem to 3rem) */
-    background: rgba(0, 0, 0, 0.4); /* Optional: semi-transparent dark overlay */
-    z-index: 2; /* Place text above the video */
-    color: white;
-     font-family: "Roboto", sans-serif;
-     font-weight: 1000;
-     font-style: normal;
+    width: 100%;
+    height: 100%;
+    max-width: 1400px;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-
 .video-text-overlay .text-content {
-    max-width: 30%; /* Limit the width of the text block to 30% for a slimmer appearance */
-    font-weight: normal; /* Remove boldness, making text thinner */
+    position: relative;
+    margin-left: 1rem;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: left;
+
 }
 
 .video-text-overlay .text-content h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Arial', serif;
 }
 
 .video-text-overlay .text-content p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    user-select: none;
+    font-size: 1.2rem;
+    width: 26rem;
+    text-wrap: pretty;
+    border-bottom: 1px solid white;
+    border-top: 1px solid #ffffff;
+    padding: 1.2rem 0rem;
+    margin-top: 1rem;
+    margin-bottom: 1.7rem;
+    line-height: 1.5;
+    font-family: 'Arial', serif;
 }
 
 .video-text-overlay .text-content .video_btn {
     display: inline-block;
     padding: 10px 20px;
-    background: white; /* White background for the first button */
-    color: black;
-    text-decoration: none;
-    border-radius: 3px;
-    border: 1px solid white;
-    transition: backround 0.3s;
-    font-weight: 800;
-    box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, 0.3); /* Add drop shadow to button */
-}
-
-.video-text-overlay .text-content .video_btn_2 {
-    display: inline-block;
-    padding: 10px 20px;
-    background: transparent; /* Transparent background for the second button */
+    font-size: 1.2rem;
     color: white;
-    border: 3px solid white; /* Thick white border */
-    border-radius: 3px;
+    background-color: #bb222d;
+    border: none;
+    border-radius: 5px;
     text-decoration: none;
-    font-weight: 800;
-    margin-left: 1rem; /* Add space between buttons */
-    transition: background 0.3s, color 0.3s, font-weight 0.3s;
-    width: 6.83rem;
-    height: 1.56rem;
-    padding-right: 0;
-    padding-top: 8px;
-    padding-bottom: 5px;
-    padding-left: 20px;
-    box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, 0.3); /* Add drop shadow to second button */
+    transition: background-color 0.3s ease;
 }
 
 .video-text-overlay .text-content .video_btn:hover {
-    background: #ebebebf6; /* Slightly darker on hover */
-    color: rgb(2, 2, 2);
-}
-
-.video-text-overlay .text-content .video_btn_2:hover {
-    background: #ebebebf6; /* White background on hover */
-    color: black; /* Black text on hover */
-    font-weight: 800;
-    border: 3px solid #ebebebf6; 
-}
-
-.video-text-overlay .text-content {
-    max-width: 24rem; /* Limit the width of the text block to 30% for a slimmer appearance */
-    font-weight: normal; /* Remove boldness, making text thinner */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Add text shadow */
-}
-
-.video-text-overlay .text-content h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Apply shadow to headings */
-}
-
-.video-text-overlay .text-content p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);/* Apply shadow to paragraphs */
+    background-color: #e5533d;
 }

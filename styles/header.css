@@ -292,3 +292,16 @@ header button span {
   margin-bottom: 0.1rem;
   border-bottom: none;
 }
+
+
+
+
+
+
+/* Colț la navbar contacte */
+@media (max-width: 1400px) {
+  header .contacts {
+    border-bottom-right-radius: 0px;
+  }
+  
+}
