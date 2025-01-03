@@ -2,6 +2,8 @@
 const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
 function setupToggle(button, div) {
+    let isTouchActive = false; // Flag pentru interacțiuni touch
+
     function toggleActive() {
         button.classList.toggle('active');
         div.classList.toggle('active');
@@ -24,30 +26,41 @@ function setupToggle(button, div) {
     if (!isTouchDevice) {
         // Gestionare hover pentru mouse-only
         div.addEventListener('mouseover', () => {
-            button.classList.add('active');
-            div.classList.add('active');
-            console.log('mouseover active');
+            if (!isTouchActive) {
+                button.classList.add('active');
+                div.classList.add('active');
+                console.log('mouseover active');
+            }
         });
 
         button.addEventListener('mouseenter', () => {
-            button.classList.add('active');
-            div.classList.add('active');
-            console.log('mouseenter active');
+            if (!isTouchActive) {
+                button.classList.add('active');
+                div.classList.add('active');
+                console.log('mouseenter active');
+            }
         });
 
         document.addEventListener('mousemove', (event) => {
-            if (!button.contains(event.target) && !div.contains(event.target)) {
+            if (!isTouchActive && !button.contains(event.target) && !div.contains(event.target)) {
                 removeActive();
             }
         });
     }
 
-    // Închidere dropdown pe click în afara elementului
+    // Închidere dropdown pe click/touch în afara elementului
     document.addEventListener('click', () => {
         removeActive();
     });
+
     document.addEventListener('touchstart', () => {
+        isTouchActive = true; // Setează touch ca activ
         removeActive();
+
+        // Resetează flag-ul pentru touch după un timp
+        setTimeout(() => {
+            isTouchActive = false;
+        }, 300);
     });
 }
 

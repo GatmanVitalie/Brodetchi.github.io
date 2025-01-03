@@ -38,14 +38,14 @@
 }
 
 .video-text-overlay .text-content h2 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     margin-bottom: 0.5rem;
     font-family: 'Arial', serif;
 }
 
 .video-text-overlay .text-content p {
-    font-size: 1.2rem;
-    width: 26rem;
+    font-size: 1.1rem;
+    width: 24.9rem;
     text-wrap: pretty;
     border-bottom: 1px solid white;
     border-top: 1px solid #ffffff;
@@ -70,4 +70,4 @@
 
 .video-text-overlay .text-content .video_btn:hover {
     background-color: #e5533d;
-}
+} 
