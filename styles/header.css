@@ -12,15 +12,23 @@ header {
   justify-content: center;
 }
 
-header .container {
+header .content {
   color: white;
   font-size: 2.5rem;
   background-color: rgba(0, 0, 0, 0);
   height: 100%;
   width: 100%;
-  max-width: 1400px;
+  max-width: clamp(
+    68rem,
+    1400px,
+    1900px
+  ); /* Minim 68rem maxim 1900px si edal ar fi să fie 1400px */
   align-self: center;
   display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: flex-start;
   justify-content: space-between;
 }
 
@@ -236,7 +244,8 @@ header button span {
     visibility 0s ease-in-out;
 }
 
-.dropdown .container {
+.dropdown .container,
+.mobile_menu .container {
   border-top: var(--grosime_border) solid #a90e0e;
   border-bottom: var(--grosime_border) solid #a90e0e;
 }
@@ -256,6 +265,7 @@ header button span {
 }
 
 .whitesq {
+  transform-origin: center;
   position: absolute;
   background-color: rgb(255, 255, 255);
   border: var(--grosime_border) solid #a90e0e;
@@ -296,7 +306,7 @@ header button span {
 
 /* Butoane telefon */
 .phone_btns {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   flex-direction: row;
@@ -307,10 +317,10 @@ header button span {
 /* Root Variables for Scaling */
 :root {
   --button-size: 3rem; /* Overall size of the hamburger button */
-  --bar-thickness: calc(var(--button-size) / 10); /* Thickness of bars */
+  --bar-thickness: calc(var(--button-size) / 16); /* Thickness of bars */
   --bar-spacing: calc(var(--button-size) / 6); /* Spacing between bars */
   --bar-width: 80%; /* Relative width of bars */
-  --animation-duration: 0.3s; /* Animation speed */
+  --animation-duration: 0.18s; /* Animation speed */
 }
 
 /* Hamburger Menu */
@@ -335,14 +345,12 @@ header button span {
     opacity var(--animation-duration);
 }
 
-.hamburger_menu span:nth-child(1)
-{
+.hamburger_menu span:nth-child(1) {
   transform-origin: center;
 }
 
-.hamburger_menu span:nth-child(3)
-{
- transform-origin: center;
+.hamburger_menu span:nth-child(3) {
+  transform-origin: center;
 }
 
 #hamburger_checkbox {
@@ -350,7 +358,7 @@ header button span {
 }
 
 #hamburger_checkbox:checked + .hamburger_menu span:nth-child(1) {
-  transform: translateY(calc((var(--button-size) + var(--bar-thickness))/4))
+  transform: translateY(calc((var(--button-size) + var(--bar-thickness)) / 4))
     rotate(45deg);
 }
 
@@ -359,63 +367,125 @@ header button span {
 }
 
 #hamburger_checkbox:checked + .hamburger_menu span:nth-child(3) {
-  transform: translateY(calc(-1*(var(--button-size) + var(--bar-thickness))/4))
+  transform: translateY(
+      calc(-1 * (var(--button-size) + var(--bar-thickness)) / 4)
+    )
     rotate(-45deg);
 }
 
 /* Mobile Menu */
 .mobile_menu {
-  display: none;
-  flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.9);
-  position: absolute;
-  top: calc(var(--button-size) * 1.5);
-  right: 1rem;
-  border-radius: 10px;
-  z-index: 15;
-  padding: 10px;
-}
-
-#hamburger_checkbox:checked ~ .mobile_menu {
   display: flex;
+  visibility: hidden; /*de pus la hiden*/
+  flex-direction: column;
+  background: none;
+  position: absolute;
+  transform-origin: left top;
+  transform: translate(-22rem, 0rem);
+  border-radius: 0;
+  /* margin-right: 2rem; */
+  z-index: 15;
+  opacity: 0;
+  width: 27rem;
+  transition: transform var(--animation-duration),
+    opacity var(--animation-duration), visibility 0s ease-in-out;
 }
 
-.mobile_menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.mobile_menu .container {
+ width: 100%;
+ border-top: var(--grosime_border) solid #a90e0e;
+ border-bottom: var(--grosime_border) solid #a90e0e;
 }
 
-.mobile_menu li {
-  padding: 10px;
-  text-align: center;
+.mobile_menu .dropdown_menu {
+  width: 100%;
 }
 
-.mobile_menu li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
+.mobile_menu.checked {
+  transform: translate(-22rem, 1rem);
+  visibility: visible;
+  opacity: 1;
 }
 
-.mobile_menu li a:hover {
-  text-decoration: underline;
+.mobile_menu button {
+  width: 24rem;
+  height: 3.5rem;
+  padding: 0.25rem 1rem 0.1rem;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 2px solid rgb(195, 195, 195);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.mobile_menu button:hover {
+  background-color: rgb(243, 243, 243);
+  cursor: pointer;
+}
+
+.mobile_menu button:first-child {
+  margin-top: 0.2rem;
+}
+
+.mobile_menu button:last-child {
+  margin-bottom: 0.1rem;
+  border-bottom: none;
+}
+
+.mobile_menu button p {
+ font-size: 1.4rem;
+}
+
+.mobile_menu button .arrow {
+  transform: scale(1.25);
+  width: 0.73rem;
+}
+
+.mobile_menu button .arrow span 
+ {
+  background-color: rgb(0, 0, 0);
+  height: 0.05rem;
+}
+
+.mobile_menu .whitesq {
+  transform-origin: center;
+  right: 3.1rem;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  border: var(--grosime_border) solid #a90e0e;
+  z-index: 1;
+  width: var(--marime_patrat);
+  height: var(--marime_patrat);
+  margin: 0px;
+  transform: translate(0.59rem, -0.6rem) rotate(45deg);
+  top: 0px;
+  backface-visibility: hidden;
+  will-change: transform;
 }
 
 /* Colț la navbar contacte */
-@media (max-width: 1400px) {
+@media screen and (max-width: clamp(68rem, 1400px, 1900px)) {
   header .contacts {
     border-bottom-right-radius: 0px;
   }
 }
 
-@media (max-width: 1200px) {
+/* Pentru calculatoare cu ecrane mici sau tablezi mari */
+/* 1200px, restul debuging */
+@media (max-width: 1400px) {
   .buttons {
     display: none !important;
     background-color: rgb(255, 0, 0);
   }
 
-  .hamburger_menu {
+  .phone_btns {
     display: flex !important;
+  }
+
+  :root
+  {
+    --grosime_border: 4px;
   }
 }
 
