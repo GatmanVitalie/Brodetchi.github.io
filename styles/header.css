@@ -357,16 +357,16 @@ header button span {
   display: none;
 }
 
-#hamburger_checkbox:checked + .hamburger_menu span:nth-child(1) {
+#hamburger_checkbox.checked + .hamburger_menu span:nth-child(1) {
   transform: translateY(calc((var(--button-size) + var(--bar-thickness)) / 4))
     rotate(45deg);
 }
 
-#hamburger_checkbox:checked + .hamburger_menu span:nth-child(2) {
+#hamburger_checkbox.checked + .hamburger_menu span:nth-child(2) {
   opacity: 0;
 }
 
-#hamburger_checkbox:checked + .hamburger_menu span:nth-child(3) {
+#hamburger_checkbox.checked + .hamburger_menu span:nth-child(3) {
   transform: translateY(
       calc(-1 * (var(--button-size) + var(--bar-thickness)) / 4)
     )
@@ -392,9 +392,9 @@ header button span {
 }
 
 .mobile_menu .container {
- width: 100%;
- border-top: var(--grosime_border) solid #a90e0e;
- border-bottom: var(--grosime_border) solid #a90e0e;
+  width: 100%;
+  border-top: var(--grosime_border) solid #a90e0e;
+  border-bottom: var(--grosime_border) solid #a90e0e;
 }
 
 .mobile_menu .dropdown_menu {
@@ -412,12 +412,11 @@ header button span {
   height: 3.5rem;
   padding: 0.25rem 1rem 0.1rem;
   background-color: rgb(255, 255, 255);
-  border-bottom: 2px solid rgb(195, 195, 195);
+  border-bottom: 2px solid rgb(136 99 99);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
-
 
 .mobile_menu button:hover {
   background-color: rgb(243, 243, 243);
@@ -425,7 +424,7 @@ header button span {
 }
 
 .mobile_menu button:first-child {
-  margin-top: 0.2rem;
+  margin-top: 0.25rem;
 }
 
 .mobile_menu button:last-child {
@@ -434,16 +433,19 @@ header button span {
 }
 
 .mobile_menu button p {
- font-size: 1.4rem;
+  font-size: 1.4rem;
 }
 
 .mobile_menu button .arrow {
-  transform: scale(1.25);
+  transform: scale(1.25) rotate(-90deg);
   width: 0.73rem;
 }
 
-.mobile_menu button .arrow span 
- {
+.mobile_menu button.active .arrow {
+  transform: scale(1.25) rotate(0deg);
+}
+
+.mobile_menu button .arrow span {
   background-color: rgb(0, 0, 0);
   height: 0.05rem;
 }
@@ -462,6 +464,28 @@ header button span {
   top: 0px;
   backface-visibility: hidden;
   will-change: transform;
+}
+
+.secondary_menu {
+  list-style-type: none;
+  border-bottom: 1px solid black;
+  margin: 0;
+}
+
+.secondary_menu li {
+  display: flex;
+  align-items: center;
+}
+
+.secondary_menu button {
+  width: 24rem;
+  height: 3.5rem;
+  padding: 0.25rem 1rem 0.1rem;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 2px solid rgb(111 54 54);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* Colț la navbar contacte */
@@ -483,12 +507,14 @@ header button span {
     display: flex !important;
   }
 
-  :root
-  {
+  :root {
     --grosime_border: 4px;
   }
 }
 
-/* @media (max-width: 768px) {
-
-} */
+@media (max-width: 768px) {
+  .mobile_menu
+  {
+    width: 100%;
+  }
+}
