@@ -76,23 +76,42 @@ setupToggle(
 );
 
 // Asigurare poziționare dropdown la resize sau load
-window.addEventListener('load', arange);
-window.addEventListener('resize', arange);
+const elementMap = {
+    hamburger_menu: { dropdown: 'mobile_menu', align: 'right' },
+    servici: { dropdown: 'servici_dd', align: 'left' },
+    produse: { dropdown: 'produse_dd', align: 'left' }
+};
 
-function arange() {
-    document.getElementById('servici_dd').style.left = document.getElementById('servici').getBoundingClientRect().left + 'px';
-    document.getElementById('servici_dd').style.top = document.getElementById('servici').getBoundingClientRect().bottom - 1 + 'px';
+// Funcție generală pentru aliniere
+function alignElements() {
+    for (const [baseElementId, settings] of Object.entries(elementMap)) {
+        const baseElement = document.getElementById(baseElementId);
+        const dropdownElement = document.getElementById(settings.dropdown);
 
-    document.getElementById('produse_dd').style.left = document.getElementById('produse').getBoundingClientRect().left + 'px';
-    document.getElementById('produse_dd').style.top = document.getElementById('produse').getBoundingClientRect().bottom - 1 + 'px';
+        if (baseElement && dropdownElement) {
+            const baseRect = baseElement.getBoundingClientRect();
 
-    document.getElementById('mobile_menu').style.left = document.getElementById('hamburger_menu').getBoundingClientRect().left + 'px';
-    document.getElementById('mobile_menu').style.top = document.getElementById('hamburger_menu').getBoundingClientRect().bottom - 1 + 'px';
+            // Setarea poziției `top`
+            dropdownElement.style.top = `${baseRect.bottom + window.scrollY}px`;
 
-
+            // Setarea poziției `left` bazată pe aliniere
+            if (settings.align === 'left') {
+                dropdownElement.style.left = `${baseRect.left + window.scrollX}px`;
+            } else if (settings.align === 'right') {
+                dropdownElement.style.left = `${baseRect.right - dropdownElement.offsetWidth + window.scrollX}px`;
+            } else if (settings.align === 'center') {
+                dropdownElement.style.left = `${baseRect.left + (baseRect.width - dropdownElement.offsetWidth) / 2 + window.scrollX}px`;
+            }
+        }
+    }
 }
 
+// Aliniaza inițial
+alignElements();
 
+window.onresize = alignElements;
+window.onscroll = alignElements;
+document.addEventListener('load', alignElements);
 
 // Tilifon
 const checkbox = document.getElementById('hamburger_checkbox');
@@ -100,10 +119,11 @@ const mobileMenu = document.getElementById('mobile_menu');
 
 // Verifică click-uri pe document
 document.addEventListener('click', function (event) {
+    alignElements();
     event.stopPropagation();
     console.log("Clicked target:", event.target);
     console.log("Checkbox state before:", checkbox.classList.contains('checked'));
-
+    console.log("Este display:", document.getElementById('hamburger_menu').style.display == 'none');
     if (!checkbox.contains(event.target) && !mobileMenu.contains(event.target) && !document.getElementById('hamburger_menu').contains(event.target)) {
         console.log("Clicked outside. Removing classes.");
         checkbox.classList.remove('checked');
@@ -127,7 +147,16 @@ document.addEventListener('click', function (event) {
     console.log('\n \n \n');
 });
 
+// Dă uncheck la hamburger când el este ascuns
+window.onresize = function () {
+    const phoneBtns = document.getElementById('phone_btns');
+    const displayValue = window.getComputedStyle(phoneBtns).display;
 
+    if (displayValue === 'none') {
+        checkbox.classList.remove('checked');
+        mobileMenu.classList.remove('checked');
+    }
+};
 
 // Adaugă un eveniment de click pe checkbox
 

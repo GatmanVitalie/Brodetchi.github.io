@@ -374,41 +374,56 @@ header button span {
 }
 
 /* Mobile Menu */
+/* Starea inițială (ascunsă) */
 .mobile_menu {
-  display: flex;
-  visibility: hidden; /*de pus la hiden*/
+  display: none;
+  visibility: hidden;
   flex-direction: column;
   background: none;
   position: absolute;
   transform-origin: left top;
-  transform: translate(-22rem, 0rem);
+  transform: translate(2rem, 0rem);
   border-radius: 0;
-  /* margin-right: 2rem; */
   z-index: 15;
   opacity: 0;
   width: 27rem;
-  transition: transform var(--animation-duration),
-    opacity var(--animation-duration), visibility 0s ease-in-out;
+  transition: transform var(--animation-duration) ease-in-out,
+    opacity var(--animation-duration) ease-in-out;
+}
+
+/* Starea activă (vizibilă) */
+.mobile_menu.checked {
+  transform: translate(2rem, 1rem);
+  visibility: visible; /* Setată la începutul animației */
+  opacity: 1;
+}
+
+.mobile_menu {
+  transition: transform var(--animation-duration) ease-in-out, opacity var(--animation-duration) ease-in-out,
+    visibility 0s var(--animation-duration); /* visibility se schimbă după 0.3s */
+}
+
+.mobile_menu.checked {
+  transition: transform var(--animation-duration) ease-in-out, opacity var(--animation-duration) ease-in-out,
+    visibility 0s 0s; /* visibility devine vizibil imediat */
 }
 
 .mobile_menu .container {
   width: 100%;
+  background-color: white;
   border-top: var(--grosime_border) solid #a90e0e;
   border-bottom: var(--grosime_border) solid #a90e0e;
+  display: flex;
+  justify-content: center;
 }
 
 .mobile_menu .dropdown_menu {
-  width: 100%;
-}
-
-.mobile_menu.checked {
-  transform: translate(-22rem, 1rem);
-  visibility: visible;
-  opacity: 1;
+  width: 90%;
+  align-self: center;
 }
 
 .mobile_menu button {
-  width: 24rem;
+  width: 100%;
   height: 3.5rem;
   padding: 0.25rem 1rem 0.1rem;
   background-color: rgb(255, 255, 255);
@@ -418,19 +433,20 @@ header button span {
   justify-content: space-between;
 }
 
+.dropdown_menu button:first-child {
+  padding-top: 0.5rem;
+ }
+
+.dropdown_menu button:last-child  {
+ border: none;
+}
+
 .mobile_menu button:hover {
   background-color: rgb(243, 243, 243);
   cursor: pointer;
 }
 
-.mobile_menu button:first-child {
-  margin-top: 0.25rem;
-}
 
-.mobile_menu button:last-child {
-  margin-bottom: 0.1rem;
-  border-bottom: none;
-}
 
 .mobile_menu button p {
   font-size: 1.4rem;
@@ -468,21 +484,25 @@ header button span {
 
 .secondary_menu {
   list-style-type: none;
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black; */
   margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 .secondary_menu li {
   display: flex;
   align-items: center;
+  width: 100%;
+  border: none;
 }
 
 .secondary_menu button {
-  width: 24rem;
+ width: 100%;
   height: 3.5rem;
   padding: 0.25rem 1rem 0.1rem;
   background-color: rgb(255, 255, 255);
-  border-bottom: 2px solid rgb(111 54 54);
+  border-bottom: 2px solid rgb(136 99 99);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -504,7 +524,11 @@ header button span {
   }
 
   .phone_btns {
-    display: flex !important;
+    display: flex;
+  }
+
+  .mobile_menu {
+    display: flex;
   }
 
   :root {
@@ -513,8 +537,7 @@ header button span {
 }
 
 @media (max-width: 768px) {
-  .mobile_menu
-  {
+  .mobile_menu {
     width: 100%;
   }
 }
