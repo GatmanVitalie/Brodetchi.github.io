@@ -111,8 +111,8 @@ function alignElements() {
 // Aliniaza inițial
 alignElements();
 
-window.onresize = alignElements;
-window.onscroll = alignElements;
+window.addEventListener("resize", alignElements);
+window.addEventListener("scroll", alignElements);
 document.addEventListener('load', alignElements);
 
 // Tilifon
@@ -130,6 +130,7 @@ document.addEventListener('click', function (event) {
         console.log("Clicked outside. Removing classes.");
         checkbox.classList.remove('checked');
         mobileMenu.classList.remove('checked');
+        reset_mobileMenu();
     }
     else if (checkbox.contains(event.target) || document.getElementById('hamburger_menu').contains(event.target)) {
         console.log("Clicked checkbox. Current state:", checkbox.classList.contains('checked'));
@@ -160,89 +161,26 @@ window.onresize = function () {
     }
 };
 
-// Adaugă un eveniment de click pe checkbox
 
 
-// Eveniment pentru schimbarea stării checkbox-ului
+const servici_mob = document.getElementById('servici_mob');
+const servici_mob_dd = document.getElementById('servici_mob_dd');
+const produse_mob = document.getElementById('produse_mob');
+const produse_mob_dd = document.getElementById('produse_mob_dd');
 
+function toggle_servici_mob() {
+    servici_mob.classList.toggle('active');
+    servici_mob_dd.classList.toggle('active');
+}
 
+function toggle_produse_mob() {
+    produse_mob.classList.toggle('active');
+    produse_mob_dd.classList.toggle('active');
+}
 
-
-
-
-
-
-// MobsetupToggle(
-//     document.getElementById('produse_mob'),
-//     document.getElementById('produse_mob_dd')
-// );
-
-// MobsetupToggle(
-//     document.getElementById('servici_mob'),
-//     document.getElementById('servici_mob_dd')
-// );
-
-
-
-// function MobsetupToggle(button, div) {
-//     let isTouchActive = false; // Flag pentru interacțiuni touch
-
-//     function toggleActive() {
-//         button.classList.toggle('active');
-//         div.classList.toggle('active');
-//         console.log('toggle');
-//     }
-
-//     function removeActive() {
-//         button.classList.remove('active');
-//         div.classList.remove('active');
-//         console.log('remove');
-//     }
-
-//     // Gestionare click
-//     button.addEventListener('click', (event) => {
-//         toggleActive();
-//         event.stopPropagation();
-//         console.log('click');
-//     });
-
-//     if (!isTouchDevice) {
-//         // Gestionare hover pentru mouse-only
-//         div.addEventListener('mouseover', () => {
-//             if (!isTouchActive) {
-//                 button.classList.add('active');
-//                 div.classList.add('active');
-//                 console.log('mouseover active');
-//             }
-//         });
-
-//         button.addEventListener('mouseenter', () => {
-//             if (!isTouchActive) {
-//                 button.classList.add('active');
-//                 div.classList.add('active');
-//                 console.log('mouseenter active');
-//             }
-//         });
-
-//         document.addEventListener('mousemove', (event) => {
-//             if (!isTouchActive && !button.contains(event.target) && !div.contains(event.target)) {
-//                 removeActive();
-//             }
-//         });
-//     }
-
-//     // Închidere dropdown pe click/touch în afara elementului
-//     document.addEventListener('click', () => {
-//         removeActive();
-//     });
-
-//     document.addEventListener('touchstart', () => {
-//         isTouchActive = true; // Setează touch ca activ
-//         removeActive();
-
-//         // Resetează flag-ul pentru touch după un timp
-//         setTimeout(() => {
-//             isTouchActive = false;
-//         }, 300);
-//     });
-// }
+function reset_mobileMenu() {
+    servici_mob.classList.remove('active');
+    servici_mob_dd.classList.remove('active');
+    produse_mob.classList.remove('active');
+    produse_mob_dd.classList.remove('active');
+}
