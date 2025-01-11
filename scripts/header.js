@@ -142,6 +142,8 @@ document.addEventListener('click', function (event) {
             console.log("Removing 'checked' class.");
             checkbox.classList.remove('checked');
             mobileMenu.classList.remove('checked');
+            reset_mobileMenu();
+
         }
         event.preventDefault();
     }
