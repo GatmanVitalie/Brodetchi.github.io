@@ -106,23 +106,7 @@ function alignElements() {
     }
 }
 
-setTimeout(() => {
-    const videoContainer = document.getElementById('video-container');
-    const video = document.getElementById('secondary-video');
 
-    // Afișează containerul
-    videoContainer.style.display = 'flex';
-
-    // Pornește video-ul manual
-    video.play().catch((error) => {
-      console.error('Video playback failed:', error);
-    });
-
-    // Ascunde containerul când video-ul se termină
-    video.onended = () => {
-      videoContainer.style.display = 'none';
-    };
-  }, 5000); // 10 secunde
 
 // Aliniaza inițial
 alignElements();
