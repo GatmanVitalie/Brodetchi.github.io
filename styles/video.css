@@ -40,7 +40,8 @@
 .video-text-overlay .text-content h2 {
     font-size: 2.8rem;
     margin-bottom: 0.5rem;
-    font-family: 'Arial', serif;
+    font-family: "Univers Pro Roman", sans-serif;
+    font-weight: bold;
 }
 
 .video-text-overlay .text-content p {
