@@ -8,7 +8,7 @@
 header {
   top: 0px;
   text-align: center;
-  font-family: 'Univers Pro' !important;
+  font-family: 'Univers Pro', sans-serif;
   height: 10rem;
   max-height: 18svw;
   background-color: rgba(0, 0, 0, 0);
@@ -17,6 +17,11 @@ header {
   z-index: 10;
   display: flex;
   justify-content: center;
+}
+
+header *
+{
+  font-family: 'Univers Pro', sans-serif;
 }
 
 header .content {
