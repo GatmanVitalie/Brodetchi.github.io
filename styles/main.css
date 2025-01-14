@@ -1,37 +1,35 @@
 @font-face {
-    font-family: 'Univers Pro';
-    src: url('../fonts/UniversPro75Black.woff2') format('woff2'); /* Adjust format and path as needed */
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: "Univers Pro";
+  src: url("../fonts/UniversPro75Black.woff2") format("woff2"); /* Adjust format and path as needed */
+  font-weight: normal;
+  font-style: normal;
+}
 
-body{
-    font-family: 'Univers Pro';
-    margin: 0;
-    padding: 0;
-    background-color: #595959;
-    /* display: flex;
+body {
+  font-family: "Univers Pro";
+  margin: 0;
+  padding: 0;
+  background-color: #595959;
+  /* display: flex;
     justify-content: center;
     align-items: center; */
 }
 
-.content
-{
-    width: 100%;
-    height: 7000px;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
+.content {
+  width: 100%;
+  height: 7000px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
 }
 
-button
-{
-    border: 0;
+button {
+  border: 0;
 }
 
 main {
-    flex: 1;  
-    padding-bottom: 50px;  
+  flex: 1;
+  padding-bottom: 50px;
 }
