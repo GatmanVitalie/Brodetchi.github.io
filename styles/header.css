@@ -597,7 +597,7 @@ header.simplified.hidden {
 
 /* Pentru calculatoare cu ecrane mici sau tablezi mari */
 /* 1200px, restul debuging */
-@media screen and (max-width: clamp(61rem, 1200px, 63rem)) {
+@media screen and (max-width: clamp(63rem, 1100px, 70rem)) {
   .buttons {
     display: none !important;
     background-color: rgb(255, 0, 0);
