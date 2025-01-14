@@ -1,9 +1,4 @@
-@font-face {
-  font-family: 'Univers Pro';
-  src: url('../fonts/UniversPro75Black.woff2') format('woff2'); /* Adjust format and path as needed */
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 header {
   top: 0px;
