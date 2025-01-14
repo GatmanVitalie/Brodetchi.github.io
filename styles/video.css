@@ -68,8 +68,13 @@
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    font-family: 'Univers Pro Light', sans-serif;
+    font-weight: normal;
 }
 
 .video-text-overlay .text-content .video_btn:hover {
-    background-color: #e5533d;
+    background-color: #cf2631;
 } 
+
+.video-text-overlay .text-content .video_btn .a{
+}
