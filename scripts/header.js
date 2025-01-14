@@ -13,14 +13,14 @@ function setupToggle(button, div) {
     function removeActive() {
         button.classList.remove('active');
         div.classList.remove('active');
-        console.log('remove');
+        // console.log('remove');
     }
 
     // Gestionare click
     button.addEventListener('click', (event) => {
         toggleActive();
         event.stopPropagation();
-        console.log('click');
+        // console.log('click');
     });
 
     if (!isTouchDevice) {
@@ -29,7 +29,7 @@ function setupToggle(button, div) {
             if (!isTouchActive) {
                 button.classList.add('active');
                 div.classList.add('active');
-                console.log('mouseover active');
+                // console.log('mouseover active');
             }
         });
 
@@ -37,7 +37,7 @@ function setupToggle(button, div) {
             if (!isTouchActive) {
                 button.classList.add('active');
                 div.classList.add('active');
-                console.log('mouseenter active');
+                // console.log('mouseenter active');
             }
         });
 
@@ -123,23 +123,23 @@ const mobileMenu = document.getElementById('mobile_menu');
 document.addEventListener('click', function (event) {
     alignElements();
     event.stopPropagation();
-    console.log("Clicked target:", event.target);
-    console.log("Checkbox state before:", checkbox.classList.contains('checked'));
-    console.log("Este display:", document.getElementById('hamburger_menu').style.display == 'none');
+    // console.log("Clicked target:", event.target);
+    // console.log("Checkbox state before:", checkbox.classList.contains('checked'));
+    // console.log("Este display:", document.getElementById('hamburger_menu').style.display == 'none');
     if (!checkbox.contains(event.target) && !mobileMenu.contains(event.target) && !document.getElementById('hamburger_menu').contains(event.target)) {
-        console.log("Clicked outside. Removing classes.");
+        // console.log("Clicked outside. Removing classes.");
         checkbox.classList.remove('checked');
         mobileMenu.classList.remove('checked');
         reset_mobileMenu();
     }
     else if (checkbox.contains(event.target) || document.getElementById('hamburger_menu').contains(event.target)) {
-        console.log("Clicked checkbox. Current state:", checkbox.classList.contains('checked'));
+        // console.log("Clicked checkbox. Current state:", checkbox.classList.contains('checked'));
         if (!checkbox.classList.contains('checked')) {
-            console.log("Adding 'checked' class.");
+            // console.log("Adding 'checked' class.");
             checkbox.classList.add('checked');
             mobileMenu.classList.add('checked');
         } else {
-            console.log("Removing 'checked' class.");
+            // console.log("Removing 'checked' class.");
             checkbox.classList.remove('checked');
             mobileMenu.classList.remove('checked');
             reset_mobileMenu();
@@ -148,8 +148,8 @@ document.addEventListener('click', function (event) {
         event.preventDefault();
     }
 
-    console.log("Checkbox state after:", checkbox.classList.contains('checked'));
-    console.log('\n \n \n');
+    // console.log("Checkbox state after:", checkbox.classList.contains('checked'));
+    // console.log('\n \n \n');
 });
 
 // Dă uncheck la hamburger când el este ascuns

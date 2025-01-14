@@ -1,7 +1,14 @@
+@font-face {
+  font-family: 'Univers Pro';
+  src: url('../fonts/UniversPro75Black.woff2') format('woff2'); /* Adjust format and path as needed */
+  font-weight: normal;
+  font-style: normal;
+}
+
 header {
   top: 0px;
   text-align: center;
-  font-family: Arial, sans-serif;
+  font-family: 'Univers Pro' !important;
   height: 10rem;
   max-height: 18svw;
   background-color: rgba(0, 0, 0, 0);
@@ -169,7 +176,7 @@ header .search_bar .search_button img {
 
 header button span {
   font-size: 20px;
-  font-family: Lato, sans-serif;
+  font-family: 'Lato', sans-serif;
   color: rgb(61, 61, 61);
 }
 
@@ -461,9 +468,16 @@ header button span {
 
 
 
-.mobile_menu button p {
+.mobile_menu button h3 {
   font-size: 1.4rem;
   text-decoration: none;
+  font-weight: bold;
+}
+
+.mobile_menu button p {
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: normal;
 }
 
 
@@ -511,19 +525,14 @@ header button span {
   max-height: 5000px;
 }
 
-.secondary_menu li {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  border: none;
-}
+
 
 .secondary_menu button {
  width: 100%;
   height: 3.5rem;
   padding: 0.25rem 1rem 0.1rem;
   background-color: rgb(255, 255, 255);
-  border-bottom: 2px solid rgb(136 99 99);
+  color: #404040;
   display: flex;
   align-items: center;
   justify-content: space-between;

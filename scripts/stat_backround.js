@@ -10,7 +10,7 @@ window.addEventListener("load", function() {
 
 function refit_image()
 {
-    console.log("rwgs");
+    // console.log("rwgs");
     // if (window.scrollY < backround_image.getBoundingClientRect().top) {
     //     backround_image.style.backgroundImage = "none";
     // }
