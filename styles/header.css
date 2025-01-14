@@ -469,16 +469,14 @@ header button span {
 
 
 .mobile_menu button h3 {
-  font-size: 1.4rem;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.mobile_menu button p {
   font-size: 1.2rem;
   text-decoration: none;
+  font-family: 'Univers Pro Bold', sans-serif;
+
+.mobile_menu button p {
+  font-size: 1.1rem;
+  text-decoration: none;
   font-weight: normal;
-  font-family: 'Univers Pro Bold';
 }
 
 
@@ -538,7 +536,7 @@ header button span {
   align-items: center;
   justify-content: space-between;
   padding-left: 9%;
-  font-family: 'Univers Pro', sans-serif;
+  font-family: 'Univers Pro Roman', sans-serif;
   font-weight: lighter;
 }
 
