@@ -5,6 +5,33 @@
   font-style: normal;
 }
 
+/* Font 1: MyFont */
+@font-face {
+    font-family: 'MyFont';
+    src: url('../fonts/MyFont.woff2') format('woff2'),
+         url('../fonts/MyFont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Font 2: SecondFont */
+@font-face {
+    font-family: 'SecondFont';
+    src: url('../fonts/SecondFont.woff2') format('woff2'),
+         url('../fonts/SecondFont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Font 3: ThirdFont */
+@font-face {
+    font-family: 'ThirdFont';
+    src: url('../fonts/ThirdFont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body {
   font-family: "Univers Pro";
   margin: 0;
