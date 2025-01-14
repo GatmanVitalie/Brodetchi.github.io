@@ -89,22 +89,25 @@ function alignElements() {
         const dropdownElement = document.getElementById(settings.dropdown);
 
         if (baseElement && dropdownElement) {
-            const baseRect = baseElement.getBoundingClientRect();
+            const baseRect = baseElement.getBoundingClientRect(); // Obține coordonatele relative la viewport
 
-            // Setarea poziției `top`
-            dropdownElement.style.top = `${baseRect.bottom + window.scrollY}px`;
+            // Setarea poziției `top` pentru elementul cu `position: fixed`
+            dropdownElement.style.top = `${baseRect.bottom}px`;
 
             // Setarea poziției `left` bazată pe aliniere
             if (settings.align === 'left') {
-                dropdownElement.style.left = `${baseRect.left + window.scrollX}px`;
+                dropdownElement.style.left = `${baseRect.left}px`;
             } else if (settings.align === 'right') {
-                dropdownElement.style.left = `${baseRect.right - dropdownElement.offsetWidth + window.scrollX}px`;
+                dropdownElement.style.left = `${baseRect.right - dropdownElement.offsetWidth}px`;
             } else if (settings.align === 'center') {
-                dropdownElement.style.left = `${baseRect.left + (baseRect.width - dropdownElement.offsetWidth) / 2 + window.scrollX}px`;
+                dropdownElement.style.left = `${baseRect.left + (baseRect.width - dropdownElement.offsetWidth) / 2}px`;
             }
+
+            // Asigură-te că poziția este `fixed`
         }
     }
 }
+
 
 
 
@@ -197,7 +200,7 @@ const header = document.querySelector('header');
 let lastScrollY = window.scrollY;
 
 window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
+    var currentScrollY = window.scrollY;
 
     // Adaugă clasa 'simplified' dacă scroll-ul e peste 100svh
     if (currentScrollY > window.innerHeight) {
