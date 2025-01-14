@@ -54,7 +54,8 @@
     margin-top: 1rem;
     margin-bottom: 1.7rem;
     line-height: 1.5;
-    font-family: 'Arial', serif;
+    font-family: "Univers Pro Light", sans-serif;
+    font-weight: normal;
 }
 
 .video-text-overlay .text-content .video_btn {
