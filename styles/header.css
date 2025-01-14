@@ -530,6 +530,36 @@ header button span {
   font-weight: lighter;
 }
 
+/* Header simplificat pentru pc când dai scrol */
+header.simplified {
+  position: fixed;
+  top: 0;
+  height: 5.5rem;
+  background-color: #ffffff8f;
+  border-bottom: var(--grosime_border) solid #a90e0e;
+
+  .contacts {
+    display: none;
+  }
+
+  .buttons {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0;
+    flex-direction: row;
+    align-content: center;
+  }
+
+  .btns {
+    margin-top: 0;
+  }
+}
+
+header.simplified.hidden {
+  display: none;
+}
+
 /* Colț la navbar contacte */
 @media screen and (max-width: clamp(68rem, 1400px, 1900px)) {
   header .contacts {
