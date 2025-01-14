@@ -550,7 +550,7 @@ header button span {
 
 /* Pentru calculatoare cu ecrane mici sau tablezi mari */
 /* 1200px, restul debuging */
-@media (max-width: 12px) {
+@media (max-width: 1400px) {
   .buttons {
     display: none !important;
     background-color: rgb(255, 0, 0);
