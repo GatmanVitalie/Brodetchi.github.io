@@ -542,7 +542,8 @@ header.simplified {
   position: fixed;
   top: 0;
   height: 5.5rem;
-  background-color: #ffffff8f;
+  background-color: #ffffffe8;
+  backdrop-filter: blur(4px);
   border-bottom: var(--grosime_border) solid #a90e0e;
 
   .contacts {
@@ -556,10 +557,30 @@ header.simplified {
     margin-top: 0;
     flex-direction: row;
     align-content: center;
+    color: #000000;
   }
 
   .btns {
     margin-top: 0;
+  }
+
+  .btns button p {
+    color: #000;
+  }
+
+  .arrow span {
+    background-color: black;
+  }
+
+  .logo {
+    height: 88%;
+    margin-top: 0;
+    margin-left: 1rem;
+  }
+
+  .dropdown
+  {
+    transform: translate(-25%, calc(-1 * var(--grosime_border) + 0.6px));
   }
 }
 
