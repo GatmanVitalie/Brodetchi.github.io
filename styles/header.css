@@ -284,14 +284,15 @@ header button span {
 }
 
 .dropdown button {
-  width: 80%;
-  height: 2.2rem;
+  width: 85%;
+  height: 2.5rem;
   padding: 0.25rem 1rem 0.1rem;
   background-color: rgb(255, 255, 255);
   border-bottom: 1px solid rgb(195, 195, 195);
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1rem;
 }
 
 .dropdown button:hover {
@@ -300,7 +301,7 @@ header button span {
 }
 
 .dropdown button:first-child {
-  margin-top: 0.2rem;
+  margin-top: 0.1rem;
 }
 
 .dropdown button:last-child {
@@ -446,7 +447,7 @@ header button span {
 }
 
 .mobile_menu .dropdown_menu:first-child {
-  /* padding-top: 0.5rem; */
+  padding-top: 0.3rem;
 }
 
 .dropdown_menu:last-child {
