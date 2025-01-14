@@ -186,3 +186,10 @@ function reset_mobileMenu() {
     produse_mob.classList.remove('active');
     produse_mob_dd.classList.remove('active');
 }
+
+
+
+
+
+
+// Posiția la header

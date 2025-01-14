@@ -449,7 +449,7 @@ header button span {
 }
 
 .mobile_menu .dropdown_menu:first-child {
-  padding-top: 0.5rem;
+  /* padding-top: 0.5rem; */
  }
 
 .dropdown_menu:last-child  {
@@ -476,8 +476,7 @@ header button span {
 .mobile_menu button p {
   font-size: 1.1rem;
   text-decoration: none;
-  font-family: 'Univers Pro Bold', sans-serif;
-  font-weight: 400;
+  font-weight: normal;
 }
 
 
@@ -550,7 +549,7 @@ header button span {
 
 /* Pentru calculatoare cu ecrane mici sau tablezi mari */
 /* 1200px, restul debuging */
-@media (max-width: 1400px) {
+@media screen and (max-width: clamp(68rem, 1400px, 1900px)) {
   .buttons {
     display: none !important;
     background-color: rgb(255, 0, 0);
