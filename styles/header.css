@@ -297,8 +297,8 @@ header button span {
   align-items: center;
   justify-content: center;
   font-size: 1.1rem;
-  font-family: 'Univers Pro Light', sans-serif;
-  font-weight: normal;
+  font-family: 'Univers Pro Roman', sans-serif;
+  font-weight: 100;
   color: #333333;
 }
 
