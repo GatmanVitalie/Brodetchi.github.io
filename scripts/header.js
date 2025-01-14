@@ -193,3 +193,27 @@ function reset_mobileMenu() {
 
 
 // Posiția la header
+const header = document.querySelector('header');
+let lastScrollY = window.scrollY;
+
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+
+    // Adaugă clasa 'simplified' dacă scroll-ul e peste 100svh
+    if (currentScrollY > window.innerHeight) {
+        header.classList.add('simplified');
+    } else {
+        header.classList.remove('simplified');
+    }
+
+    // Ascunde sau arată header-ul în funcție de direcția scroll-ului
+    if (currentScrollY > lastScrollY) {
+        // Scroll down
+        header.classList.add('hidden');
+    } else {
+        // Scroll up
+        header.classList.remove('hidden');
+    }
+
+    lastScrollY = currentScrollY;
+});
