@@ -551,7 +551,7 @@ header button span {
 
 /* Pentru calculatoare cu ecrane mici sau tablezi mari */
 /* 1200px, restul debuging */
-@media screen and (max-width: clamp(68rem, 1400px, 1900px)) {
+@media screen and (max-width: clamp(61rem, 1200px, 64rem)) {
   .buttons {
     display: none !important;
     background-color: rgb(255, 0, 0);
