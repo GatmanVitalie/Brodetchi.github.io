@@ -84,15 +84,23 @@ const elementMap = {
 
 // Funcție generală pentru aliniere
 function alignElements() {
+    const header = document.querySelector('header'); // Selectăm header-ul
+    const headerHeight = header.offsetHeight; // Obținem înălțimea header-ului
+    const isSimplified = header.classList.contains('simplified'); // Verificăm dacă are clasa `simplified`
+
     for (const [baseElementId, settings] of Object.entries(elementMap)) {
         const baseElement = document.getElementById(baseElementId);
         const dropdownElement = document.getElementById(settings.dropdown);
 
         if (baseElement && dropdownElement) {
-            const baseRect = baseElement.getBoundingClientRect(); // Obține coordonatele relative la viewport
+            const baseRect = baseElement.getBoundingClientRect(); // Coordonatele elementului față de viewport
 
-            // Setarea poziției `top` pentru elementul cu `position: fixed`
-            dropdownElement.style.top = `${baseRect.bottom}px`;
+            // Setarea poziției `top`
+            if (isSimplified) {
+                dropdownElement.style.top = `${headerHeight}px`; // Înălțimea header-ului când are clasa `simplified`
+            } else {
+                dropdownElement.style.top = `${baseRect.bottom}px`; // Coordonata de jos a elementului de bază
+            }
 
             // Setarea poziției `left` bazată pe aliniere
             if (settings.align === 'left') {
@@ -103,10 +111,10 @@ function alignElements() {
                 dropdownElement.style.left = `${baseRect.left + (baseRect.width - dropdownElement.offsetWidth) / 2}px`;
             }
 
-            // Asigură-te că poziția este `fixed`
         }
     }
 }
+
 
 
 
