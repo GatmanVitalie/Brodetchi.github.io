@@ -536,7 +536,9 @@ header button span {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 9%
+  padding-left: 9%;
+  font-family: 'Univers Pro', sans-serif;
+  font-weight: lighter;
 }
 
 /* Colț la navbar contacte */
