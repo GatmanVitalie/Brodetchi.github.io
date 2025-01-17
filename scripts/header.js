@@ -228,3 +228,15 @@ window.addEventListener('scroll', () => {
 
     lastScrollY = currentScrollY;
 });
+
+
+// Video button animation handle
+let videoButton = document.querySelector(".video_btn");
+
+videoButton.addEventListener('mousemove', (e) => {
+    let rect = videoButton.getBoundingClientRect();
+    let x = e.clientX - rect.left;
+    let y = e.clientY - rect.top;
+    videoButton.style.setProperty('--mouse-x', x + "px");
+    videoButton.style.setProperty('--mouse-y', y + "px");
+});
