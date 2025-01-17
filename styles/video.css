@@ -1,8 +1,124 @@
 .video-container {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    height: 100svh; 
-    width: 100%;
+position: relative;
+margin: 0;
+padding: 0;
+overflow: hidden;
+height: 100svh; 
+width: 100%;
+background-color: black;
+/* box-shadow: 0px 2px 9px 8px #00000038; */
+}
+
+.video-container video {
+object-fit: cover; 
+width: 100%;
+height: 100%;
+z-index: 1;
+filter: opacity(0.7);
+}
+.video-text-overlay {
+width: 100%;
+height: 100%;
+max-width: 1400px;
+z-index: 2;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.video-text-overlay .text-content {
+position: relative;
+margin-left: 1rem;
+top: 46%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: white;
+text-align: left;
+
+}
+
+.video-text-overlay .text-content h2 {
+font-size: 2.8rem;
+margin-bottom: 0.5rem;
+font-family: "Univers Pro Roman", sans-serif;
+font-weight: bold;
+}
+
+.video-text-overlay .text-content p {
+font-size: 1.1rem;
+width: 24.9rem;
+text-wrap: pretty;
+border-bottom: 1px solid white;
+border-top: 1px solid #ffffff;
+padding: 1.2rem 0rem;
+margin-top: 1rem;
+margin-bottom: 1.7rem;
+line-height: 1.5;
+font-family: "Univers Pro Light", sans-serif;
+font-weight: normal;
+}
+
+.video-text-overlay .text-content .video_btn {
+display: inline-block;
+padding: 10px 20px;
+padding-top: 15px;
+font-size: 1.2rem;
+color: white;
+background-color: #bb222d;
+border: none;
+border-radius: 5px;
+text-decoration: none;
+transition: background-color 0.3s ease;
+font-family: 'Univers Pro Roman', sans-serif;
+font-weight: normal;
+}
+
+.video-text-overlay .text-content .video_btn:hover {
+background-color: #cf2631;
+} 
+
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+.video_btn {
+padding: 16px 42px;
+border-radius: 3px;
+box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.5);
+line-height: 1.25;
+background: #FC6E51;
+text-decoration: none;
+user-select: none;
+color: white;
+font-size: 16px;
+letter-spacing: .08em;
+text-transform: uppercase;
+position: relative;
+transition: background-color .6s ease;
+overflow: hidden;
+display: inline-block;
+}
+
+.video_btn::after {
+content: "";
+position: absolute;
+width: 0;
+height: 0;
+top: var(--mouse-y, 50%);
+left: var(--mouse-x, 50%);
+transform: translate(-50%, -50%);
+background: rgba(255, 255, 255, 0.1);
+border-radius: 50%;
+transition: width .3s ease, height .3s ease;
+}
+
+.video_btn:hover {
+background: #e65a3c;
+}
+
+.video_btn:active::after {
+width: 300px;
+height: 300px;
 }
