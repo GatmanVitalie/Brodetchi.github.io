@@ -1,17 +1,14 @@
 # Notite Vitalie
 
-Să fac versiunea de telefon la Header
-
-De facut tranziție smuth la header câdn se activeaza si dezactiveaza
-Crescut zona de activare la dreopdown menu
-Fundalul la drop menu
-
-Finisat animațiile la dropdownmenu
+Făcut ca imaginile de pe butoane să nu poate fi luate
 
 
-Să rezolv lupa
+let button = document.querySelector(".video_btn");
 
-Să scriu Meta
-
-
-
+button.addEventListener('mousemove', (e) => {
+    let rect = button.getBoundingClientRect();
+    let x = e.clientX - rect.left;
+    let y = e.clientY - rect.top;
+    button.style.setProperty('--mouse-x', x + "px");
+    button.style.setProperty('--mouse-y', y + "px");
+});

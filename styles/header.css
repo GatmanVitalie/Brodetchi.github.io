@@ -542,19 +542,11 @@ header button span {
 header.simplified {
   position: fixed;
   top: 0;
-  height: 5.1rem;
+  height: 5.5rem;
   background-color: #ffffffe8;
   backdrop-filter: blur(4px);
   border-bottom: var(--grosime_border) solid #a90e0e;
   box-shadow: 0px 4px 10px #0000003b;
-  
-  
-  
-  
-  
-  
-  
-  
 
   .contacts {
     display: none;
@@ -584,7 +576,7 @@ header.simplified {
   }
 
   .logo {
-    height: 83%;
+    height: 88%;
     margin-top: 0;
     margin-left: 1rem;
   }
