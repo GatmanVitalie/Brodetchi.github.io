@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Brodetchi</title>
+
+    <!-- Linkuri la css -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/slider.css">
+    <link rel="stylesheet" href="../styles/spining_cake.css">
+    <link rel="stylesheet" href="../styles/video.css">
+    <link rel="stylesheet" href="../styles/Grid.css">
+    <link rel="stylesheet" href="../styles/statistici.css">
+
+    <link rel="shortcut icon" href="../images/image-removebg-preview-removebg-preview2.webp" type="image/x-icon">
+    <!--Link pentru font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+    <!-- <audio autoplay loop>
+        <source src="images/tika.mp3" type="audio/mp3">
+        Browserul tău nu suportă audio HTML5.
+    </audio>   -->
+
+
+    <!-- header (header.css) -->
+    <header id="header">
+        <div class="content">
+            <!-- <input type="checkbox" name="" id="check"> -->
+
+            <div class="logo">
+                <a href="home.html">
+                    <img src="../images/brodetchi2.png" alt="Brodetchi">
+                </a>
+            </div>
+
+            <div class="buttons">
+                <div class="contacts">
+                    <button class="tel"><img src="../images/Phone.png"> <a href="tel:+079040510">+373 068 323 222</a>
+                    </button>
+                    <button class="mail"><img src="../images/email.png"><a
+                            href="mailto:brodethi@mail.com">Brodetchi.srl@mail.com</a> </button>
+                    <button class="location"><img src="../images/pin.png"><a
+                            href="https://maps.app.goo.gl/4DowU7cxdf6hoVbk8">Str. Constantin Negruzzi,
+                            Orhei</a></button>
+                </div>
+
+                <div class="btns">
+                    <div class="nav_btn">
+                        <button>
+                            <p>Acasă</p>
+                        </button>
+                        <button id="servici">
+                            <p>Servici</p>
+                            <span class="arrow">
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                        <button id="produse">
+                            <p>Produse</p>
+                            <span class="arrow">
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                        <button>
+                            <p>Contacte</p>
+                        </button>
+                        <button>
+                            <p>Despre</p>
+                        </button>
+                    </div>
+                    <div class="search_bar" onclick="this.querySelector('.search_input').focus()">
+                        <button class="search_button">
+                            <img src="../images/magnifying-glass.svg" alt="Search">
+                        </button>
+                        <input type="text" placeholder="Căutare..." class="search_input">
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- There is what i did so far -->
+            <div class="phone_btns" id="phone_btns">
+                <input type="button" id="hamburger_checkbox">
+                <label for="hamburger_checkbox" class="hamburger_menu" id="hamburger_menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="mobile_menu" id="mobile_menu">
+            <spam class="whitesq" id="whitesq_phone"></spam>
+            <div class="container">
+                <div class="cover">
+                    <div class="dropdown_menu">
+                        <button class="home_mobile">
+                            <h3>Acasă</h3>
+                        </button>
+                        <button id="servici_mob" onclick="toggle_servici_mob()">
+
+                            <h3>Servici</h3>
+                            <span class="arrow">
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                        <div class="secondary_menu" id="servici_mob_dd">
+                            <button>
+                                <p>Buton 1</p>
+                            </button>
+                            <button>
+                                <p>Buton 2</p>
+                            </button>
+                            <button>
+                                <p>Buton 3</p>
+                            </button>
+                            <button>
+                                <p>Buton 4</p>
+                            </button>
+                            <button>
+                                <p>Buton 5</p>
+                            </button>
+                            <button>
+                                <p>Buton 6</p>
+                            </button>
+                        </div>
+                        <button id="produse_mob" onclick="toggle_produse_mob()">
+
+                            <h3>Produse</h3>
+                            <span class="arrow">
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                        <div class="secondary_menu" id="produse_mob_dd">
+                            <button>
+                                <p>Buton 1</p>
+                            </button>
+                            <button>
+                                <p>Buton 2</p>
+                            </button>
+                            <button>
+                                <p>Buton 3</p>
+                            </button>
+                            <button>
+                                <p>Buton 4</p>
+                            </button>
+
+                        </div>
+                        <button>
+                            <h3>Contacte</h3>
+                        </button>
+                        <button class="about_mobile">
+                            <h3>Despre</h3>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dropdown" id="servici_dd">
+            <spam class="whitesq"></spam>
+            <div class="container">
+                <div class="dropdown_menu">
+                    <button>Buton 1</button>
+                    <button>Buton 2</button>
+                    <button>Buton 3</button>
+                    <button>Buton 4</button>
+                    <button>Buton 5</button>
+                    <button>Buton 6</button>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown" id="produse_dd">
+            <spam class="whitesq"></spam>
+            <div class="container">
+                <div class="dropdown_menu">
+                    <button>Buton 1</button>
+                    <button>Buton 2</button>
+                    <button>Buton 3</button>
+                    <button>Buton 4</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Corpul -->
+    <section class="content">
+
+        <!-- Main video (video.css) -->
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="../images/0000-0482.mp4" type="video/mp4">
+                Browserul tău nu suportă video HTML5.
+            </video>
+
+            <div class="video-text-overlay">
+                <div class="text-content">
+                    <h2>Lorem Ipsum</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet diam ipsum vulputate sit rebum consetetur rebum dolor
+                    </p>
+                    <a href="#learn-more" class="video_btn">Află mai multe</a>
+                    <!-- <a href="#learn-more" class="video_btn_2">Learn More</a> -->
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Product Section -->
+        <!--
+        <section class="product-section">
+            <h2 class="center-heading">Produse Dulci</h2> --><!-- Title aligned center -->
+        <!-- <div class="product-container">
+    
+                <div class="slider" id="slider">
+                    <div class="slide">
+                        <img src="images/Tort1.webp" loading="lazy" alt="Brodetchi">
+                    </div>
+                    <div class="slide">
+                        <img src="images/tortportocaliu.webp" loading="lazy" alt="Brodetchi">
+                    </div>
+                    <div class="slide">
+                        <img src="images/briosa cu frisca multa.webp" loading="lazy" alt="Brodetchi">
+                    </div>
+                    <div class="slide">
+                        <img src="images/briosa cu fructe.webp" loading="lazy" alt="Brodetchi">
+                    </div>
+                    <div class="slide">
+                        <img src="images/tort-cu-caramel.webp" loading="lazy" alt="Brodetchi">
+                    </div>
+    
+    
+                </div>
+    
+                <div class="product-description">
+                    <p>Descoperă gama noastră delicioasă de produse dulci, de la brioșe pufoase și apetisante, până la
+                        prăjituri fine, perfecte pentru orice moment special. Fiecare produs este pregătit cu grijă,
+                        folosind cele mai bune ingrediente, pentru a-ți aduce un zâmbet pe buze. Răsfață-ți simțurile cu
+                        savoarea și culoarea dulciurilor noastre!</p>
+                </div>
+            </div>
+        </section>  -->
+
+        <!-- Grid.css -->
+        <h1 class="section-title">Produse de panificație</h1>
+
+        <div class="articole">
+            <div class="article">
+                <h2>Pâine cu semințe</h2>
+                <div class="image_holder">
+                    <img src="../images/Paine cu seminte.webp">
+                </div>
+                <div class="text_holder">
+                    <a>O pâine hrănitoare, cu semințe sănătoase, perfectă pentru o dietă echilibrată.</a>
+                </div>
+            </div>
+            <div class="article">
+                <h2>Franzelă proaspătă</h2>
+                <div class="image_holder">
+                    <img src="../images/Paine cu seminte.webp">
+                </div>
+                <div class="text_holder">
+                    <a>O franzelă ușoară și aerată, ideală pentru sandwich-uri și mic dejunuri rapide.</a>
+                </div>
+            </div>
+            <div class="article">
+                <h2>Covrigi delicioși</h2>
+                <div class="image_holder">
+                    <img src="../images/Paine cu seminte.webp">
+                </div>
+                <div class="text_holder">
+                    <a>Covrigi aurii, crocanți la exterior și moi la interior, perfecți pentru orice
+                        moment.</a>
+                </div>
+            </div>
+            <div class="article">
+                <h2>Colaci tradiționali</h2>
+                <div class="image_holder">
+                    <img src="../images/Narcaman-Brodetchi.webp">
+                </div>
+                <div class="text_holder">
+                    <a>Colaci tradiționali, pregătiți cu multă grijă, aduc gustul autentic de acasă.</a>
+                </div>
+            </div>
+            <div class="article">
+                <h2>Torturi</h2>
+                <div class="image_holder">
+                    <img src="../images/Saptamana.webp">
+                </div>
+                <div class="text_holder">
+                    <a>O selecție diversificată de torturi la comanda perfectă pentru evenimente speciale
+                        și gusturi variate.</a>
+                </div>
+            </div>
+            <div class="article">
+                <h2>Prăjituri și rulade</h2>
+                <div class="image_holder">
+                    <img src="../images/344991591_791035389259307_8782524240306952353_n.jpg">
+                </div>
+                <div class="text_holder">
+                    <a>Eclere, rulade și profitroli cu creme rafinate, ideale pentru un moment dulce sau
+                        ocazii deosebite.</a>
+                </div>
+            </div>
+            <div class="article">
+                <h2>Produse tradiționale</h2>
+                <div class="image_holder">
+                    <img src="../images/344991591_791035389259307_8782524240306952353_n.jpg">
+                </div>
+                <div class="text_holder">
+                    <a>Specialități regionale, cum ar fi „Baba neagră”, păstrând autenticitatea șitradiția
+                        moldovenească.</a>
+                </div>
+            </div>
+            <div class="article">
+                <h2>Biscuiți și croissante</h2>
+                <div class="image_holder">
+                    <img src="../images/babaneagra.webp">
+                </div>
+                <div class="text_holder">
+                    <a>O gamă variată de biscuiți și croissante, perfecte pentru gustări rapide sau
+                        alături de cafea.</a>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <li>
+            <a href="headers.html">Font Styles</a>
+        </li>
+
+
+
+        <div class="statistici" id="statistici">
+            <div class="stat_backround"></div>
+            <h1 class="title_show" id="stat_title">Statistică</h1>
+            <div class="stat_holder" id="stat_holder">
+                <div class="stat">
+                    <img src="../images/graduated.png">
+                    <h2>0</h2>
+                    <h3>Elevi</h3>
+                </div>
+                <div class="stat">
+                    <img src="../images/graduation.png">
+                    <h2>0</h2>
+                    <h3>Media BAC</h3>
+                </div>
+                <div class="stat">
+                    <img src="../images/portfolio.png">
+                    <h2>0</h2>
+                    <h3>Profesori</h3>
+                </div>
+                <div class="stat">
+                    <img src="../images/championship-award.png">
+                    <h2>0</h2>
+                    <h3>Olimpici</h3>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../scripts/slider.js" defer></script>
+    <script src="../scripts/search.js" defer></script>
+    <script src="../scripts/header.js" defer></script>
+    <script src="../scripts/stat_backround.js" defer></script>
+    <script src="../scripts/stat.js" defer></script>
+</body>
+
+</html>

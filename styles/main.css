@@ -1,21 +1,57 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: f4f4f4;
-    display: flex;
-    /* padding-top: 60px; */
+@font-face {
+  font-family: "Univers Pro Light";
+  src: url("../fonts/UniversPro45Light.woff2") format("woff2"); /* Adjust format and path as needed */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Font 1: MyFont */
+@font-face {
+  font-family: "Univers Pro Roman";
+  src: url("../fonts/UniversPro55Roman.woff2") format("woff2"); /* Adjust format and path as needed */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers Pro Bold";
+  src: url("../fonts/UniversPro65Bold.woff2") format("woff2"); /* Adjust format and path as needed */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: "Univers Pro Black";
+    src: url("../fonts/UniversPro75Black.woff2") format("woff2"); /* Adjust format and path as needed */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body {
+  font-family: "Univers Pro";
+  margin: 0;
+  padding: 0;
+  background-color: #595959;
+  /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
-.content
-{
-    width: 100%;
-    height: 3000px;
+.content {
+  width: 100%;
+  height: 7000px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
 }
 
-button
-{
-    border: 0;
+button {
+  border: 0;
+}
+
+main {
+  flex: 1;
+  padding-bottom: 50px;
 }

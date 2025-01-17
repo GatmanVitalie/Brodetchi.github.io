@@ -1,0 +1,126 @@
+.statistici {
+  position: relative;
+  width: 100%;
+  height: 15.3cm;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 9;
+  justify-content: center;
+}
+
+.stat_backround {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  filter: blur(6px);
+  background-image: url("../images/i-think-i-have-found-what-exactl.webp");
+  background-position-y: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 0;
+}
+
+.stat_holder {
+  width: 100%;
+  height: 13cm;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 4cm;
+  height: 6cm;
+}
+
+.stat img {
+  max-width: 100%;
+  max-height: 100%;
+  filter: invert(0.9);
+}
+
+.stat h2 {
+  text-align: center;
+  margin-top: 6mm;
+  margin-bottom: 3mm;
+  font-size: 4.3rem;
+  color: rgb(235, 235, 235);
+  z-index: 2;
+}
+
+.stat h3 {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: -4.2mm;
+  margin-bottom: 0mm;
+  color: rgb(223 223 223);
+  text-wrap: nowrap;
+  z-index: 2;
+}
+
+.backround_image_desktop {
+  position: fixed;
+  width: 100%;
+  bottom: -1mm;
+  z-index: -2;
+}
+
+.backround_image_desktop img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.backround_image_phone {
+  position: fixed;
+  height: 100%;
+  min-width: 100%;
+  bottom: 0%;
+  z-index: -1;
+}
+
+.backround_image_phone img {
+  object-fit: contain;
+  height: 100%;
+  min-width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .statistici
+  {
+    flex-direction: column;
+    height: 500vw;
+  }
+  .stat_holder
+  {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-around;
+  }
+  .stat
+  {
+    width: 80svw;
+    height: auto !important;
+  }
+  .stat img
+  {
+    width: 60svw;
+    height: 60svw;
+  }
+  .stat h2
+  {
+    font-size: 23.5vw;
+  }
+  .stat h3
+  {
+    font-size: 10vw;
+  }
+} 
