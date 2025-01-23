@@ -24,6 +24,7 @@ function setupToggle(button, div) {
     });
 
     if (!isTouchDevice) {
+        
         // Gestionare hover pentru mouse-only
         div.addEventListener('mouseover', () => {
             if (!isTouchActive) {
@@ -42,7 +43,16 @@ function setupToggle(button, div) {
         });
 
         document.addEventListener('mousemove', (event) => {
-            if (!isTouchActive && !button.contains(event.target) && !div.contains(event.target)) {
+            const buttonRect = button.getBoundingClientRect();
+            const divRect = div.getBoundingClientRect();
+    
+            const isBetweenButtonAndDiv =
+                event.clientX >= Math.min(buttonRect.left, divRect.left) &&
+                event.clientX <= Math.max(buttonRect.right, divRect.right) &&
+                event.clientY >= buttonRect.bottom &&
+                event.clientY <= divRect.top;
+                console.log(isBetweenButtonAndDiv);
+            if (!isTouchActive && !button.contains(event.target) && !div.contains(event.target) && isBetweenButtonAndDiv == false) {
                 removeActive();
             }
         });
