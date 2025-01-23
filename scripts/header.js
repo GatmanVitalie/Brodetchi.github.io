@@ -24,7 +24,7 @@ function setupToggle(button, div) {
     });
 
     if (!isTouchDevice) {
-        
+
         // Gestionare hover pentru mouse-only
         div.addEventListener('mouseover', () => {
             if (!isTouchActive) {
@@ -45,15 +45,18 @@ function setupToggle(button, div) {
         document.addEventListener('mousemove', (event) => {
             var buttonRect = button.getBoundingClientRect();
             var divRect = div.getBoundingClientRect();
-    
-            let isBetweenButtonAndDiv=false;
+
+            let isBetweenButtonAndDiv = false;
             if (button.classList.contains('active')) {
                 isBetweenButtonAndDiv =
-                event.clientX >= Math.min(buttonRect.left, divRect.left) &&
-                event.clientX <= Math.max(buttonRect.right, divRect.right) &&
-                event.clientY >= buttonRect.top &&
-                event.clientY <= divRect.top;
-                console.log(event.clientX >= Math.min(buttonRect.left, divRect.left));
+                    event.clientY >= buttonRect.top &&
+                    event.clientY <= divRect.top;
+                if (isBetweenButtonAndDiv == true) {
+                    isBetweenButtonAndDiv =
+                        event.clientX >= dreppta_prin_2_puncte(divRect.left, divRect.top, buttonRect.left, buttonRect.bottom, event.clientY) &&
+                        event.clientX <= dreppta_prin_2_puncte(buttonRect.right, buttonRect.bottom, divRect.right, divRect.top, event.clientY);
+                }
+                // console.log("X: ", event.clientX, "Y: ", event.clientY, "fucntion: ", dreppta_prin_2_puncte(buttonRect.right, buttonRect.bottom, divRect.right, divRect.top, event.clientY));
             }
             else {
                 isBetweenButtonAndDiv = false;
@@ -78,6 +81,10 @@ function setupToggle(button, div) {
             isTouchActive = false;
         }, 300);
     });
+}
+
+function dreppta_prin_2_puncte(x1, y1, x2, y2, y) {
+    return (x2 - x1) / (y2 - y1) * (y - y1) + x1;
 }
 
 // Inițializează fiecare set de buton și div

@@ -547,7 +547,7 @@ header.simplified {
   border-bottom: var(--grosime_border) solid #a90e0e;
   box-shadow: 0px 4px 10px #0000003b;
   
-  
+  transition: all 195ms ease-out;
   
   
   
@@ -617,7 +617,8 @@ header.simplified {
 }
 
 header.simplified.hidden {
-  display: none;
+  top: -100%;
+  transition: all 225ms ease-in;
 }
 
 /* Colț la navbar contacte */
