@@ -43,15 +43,21 @@ function setupToggle(button, div) {
         });
 
         document.addEventListener('mousemove', (event) => {
-            const buttonRect = button.getBoundingClientRect();
-            const divRect = div.getBoundingClientRect();
+            var buttonRect = button.getBoundingClientRect();
+            var divRect = div.getBoundingClientRect();
     
-            const isBetweenButtonAndDiv =
+            let isBetweenButtonAndDiv=false;
+            if (button.classList.contains('active')) {
+                isBetweenButtonAndDiv =
                 event.clientX >= Math.min(buttonRect.left, divRect.left) &&
                 event.clientX <= Math.max(buttonRect.right, divRect.right) &&
-                event.clientY >= buttonRect.bottom &&
+                event.clientY >= buttonRect.top &&
                 event.clientY <= divRect.top;
-                console.log(isBetweenButtonAndDiv);
+                console.log(event.clientX >= Math.min(buttonRect.left, divRect.left));
+            }
+            else {
+                isBetweenButtonAndDiv = false;
+            }
             if (!isTouchActive && !button.contains(event.target) && !div.contains(event.target) && isBetweenButtonAndDiv == false) {
                 removeActive();
             }
