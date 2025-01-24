@@ -165,7 +165,10 @@ header .nav_btn p:hover,
   border-radius: 1000px;
   outline: none;
   background: white;
+  background-clip: padding-box;
 }
+
+
 
 
 .search_bar input {
