@@ -142,38 +142,61 @@ header .nav_btn p:hover,
   text-decoration: underline;
 }
 
-header .search_bar {
+.search_bar {
   display: flex;
   align-items: center;
+  justify-content: center;
+  border-radius: 112px;
   height: 100%;
-  /* width: 9rem; */
-  aspect-ratio: 34/8;
-  overflow: hidden;
-  margin-left: auto;
-  background-color: rgb(255, 255, 255);
-  border-radius: 10svw 10svw 10svw 10svw / 10svw 10svw 10svw 10svw;
-  cursor: text;
 }
 
-header .search_bar .search_input {
-  flex: 1 1 0%;
+.search_bar * {
+    outline: none;
+}
+
+.search_bar form {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  /* border: 1px solid rgba(0, 0, 0, 0.2); */
+  border-radius: 0.5rem;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 1000px;
+  outline: none;
+  background: white;
+}
+
+
+.search_bar input {
   border: none;
-  background-color: transparent;
+  padding: 0 0 0 1rem;
   font-size: 1rem;
   outline: none;
+  flex-grow: 1;
+  height: 100%;
 }
 
-header .search_bar .search_button {
+.search_bar button {
+  background-color: #a90e0e;
+  color: white;
   border: none;
-  background-color: transparent;
-  cursor: text;
-  margin-right: 0.6rem;
+  /* padding: 0.5rem 1rem; */
+  height: 100%;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
 }
 
-header .search_bar .search_button img {
-  height: 1.5rem;
-  margin: 17% 0px 0px 24%;
-  filter: invert(0.4);
+.search_bar button:hover {
+  background-color: #8b0c0c;
+}
+
+.search_bar button i {
+  font-size: 1rem;
 }
 
 header button span {
@@ -608,12 +631,6 @@ header.simplified {
 
   .hamburger_menu span {
     background-color: black;
-  }
-
-  .search_bar {
-    border: 2px solid black;
-    margin-right: 1rem;
-    height: 52%;
   }
 }
 

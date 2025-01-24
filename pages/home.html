@@ -90,11 +90,14 @@
                             <p>Despre</p>
                         </button>
                     </div>
-                    <div class="search_bar" onclick="this.querySelector('.search_input').focus()">
-                        <button class="search_button">
-                            <img src="../images/magnifying-glass.svg" alt="Search">
-                        </button>
-                        <input type="text" placeholder="Căutare..." class="search_input">
+                    
+                    <div class="search_bar">
+                        <form action="#" method="get">
+                            <input type="text" name="search" placeholder="Caută...">
+                            <button type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
                     </div>
 
                 </div>
