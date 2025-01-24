@@ -22,18 +22,12 @@ header .content {
   background-color: rgba(0, 0, 0, 0);
   height: 100%;
   width: 100%;
-  max-width: clamp(
-    68rem,
-    1400px,
-    1900px
-  ); /* Minim 68rem maxim 1900px si edal ar fi să fie 1400px */
+  max-width: clamp(68rem, 1400px, 1900px);
   align-self: center;
   display: flex;
   align-items: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: flex-start;
-  justify-content: space-between;
+  flex-flow: row;
+  place-content: flex-start space-between;
 }
 
 .logo {
@@ -151,29 +145,22 @@ header .nav_btn p:hover,
 }
 
 .search_bar * {
-    outline: none;
+  outline: none;
 }
 
 .search_bar form {
   display: flex;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.8);
-  /* border: 1px solid rgba(0, 0, 0, 0.2); */
-  border-radius: 0.5rem;
   overflow: hidden;
   height: 100%;
   border-radius: 1000px;
   outline: none;
-  background: white;
-  background-clip: padding-box;
+  background: padding-box white;
 }
-
-
-
 
 .search_bar input {
   border: none;
-  padding: 0 0 0 1rem;
+  padding: 0px 0px 0px 1rem;
   font-size: 1rem;
   outline: none;
   flex-grow: 1;
@@ -181,12 +168,11 @@ header .nav_btn p:hover,
 }
 
 .search_bar button {
-  background-color: #a90e0e;
+  background-color: rgb(169, 14, 14);
   color: white;
   border: none;
-  /* padding: 0.5rem 1rem; */
   height: 100%;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1 / 1;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -195,7 +181,7 @@ header .nav_btn p:hover,
 }
 
 .search_bar button:hover {
-  background-color: #8b0c0c;
+  background-color: rgb(139, 12, 12);
 }
 
 .search_bar button i {
@@ -204,14 +190,13 @@ header .nav_btn p:hover,
 
 header button span {
   font-size: 20px;
-  font-family: "Lato", sans-serif;
+  font-family: Lato, sans-serif;
   color: rgb(61, 61, 61);
 }
 
 .arrow {
   width: 0.7rem;
   height: 1.05rem;
-  /* margin-left: 1rem; */
   display: inline-block;
   position: relative;
   margin: 0px 0px 0px 0.4rem;
@@ -247,7 +232,6 @@ header button span {
   transform: rotate(45deg);
 }
 
-/* Dropdown */
 :root {
   --grosime_border: 3px;
   --marime_patrat: 1.5rem;
@@ -258,12 +242,11 @@ header button span {
   position: absolute;
   align-items: center;
   justify-content: center;
-  /* top: 7rem; */
   transform: translate(-25%, -0.8rem);
-  transform-origin: top center;
+  transform-origin: center top;
   width: 10rem;
   z-index: 1;
-  opacity: 0; /* le schimbat la animatie */
+  opacity: 0;
   display: flex;
   visibility: hidden;
   transition: transform calc(var(--animation_time) / 2),
@@ -272,7 +255,7 @@ header button span {
 }
 
 .dropdown.active {
-  opacity: 1; /* activa animatie */
+  opacity: 1;
   transform: translate(-25%, 0.7rem);
   visibility: visible;
   transition: transform var(--animation_time), opacity var(--animation_time),
@@ -300,7 +283,7 @@ header button span {
 }
 
 .whitesq {
-  transform-origin: center;
+  transform-origin: center center;
   position: absolute;
   background-color: rgb(255, 255, 255);
   border: var(--grosime_border) solid #a90e0e;
@@ -318,7 +301,7 @@ header button span {
   width: 85%;
   height: 2.5rem;
   padding: 0.25rem 1rem 0.1rem;
-  background-color: rgb(255 255 255 / 0%);
+  background-color: rgba(255, 255, 255, 0);
   border-bottom: 1px solid rgb(195, 195, 195);
   display: flex;
   align-items: center;
@@ -326,7 +309,7 @@ header button span {
   font-size: 1.1rem;
   font-family: "Univers Pro Roman", sans-serif;
   font-weight: 100;
-  color: #333333;
+  color: rgb(51, 51, 51);
 }
 
 .dropdown button:hover {
@@ -343,7 +326,6 @@ header button span {
   border-bottom: none;
 }
 
-/* Butoane telefon */
 .phone_btns {
   display: none;
   justify-content: center;
@@ -352,17 +334,14 @@ header button span {
   margin-right: 3.5rem;
 }
 
-/* Hamburger Menu */
-/* Root Variables for Scaling */
 :root {
-  --button-size: 3rem; /* Overall size of the hamburger button */
-  --bar-thickness: calc(var(--button-size) / 16); /* Thickness of bars */
-  --bar-spacing: calc(var(--button-size) / 6); /* Spacing between bars */
-  --bar-width: 80%; /* Relative width of bars */
-  --animation-duration: 0.18s; /* Animation speed */
+  --button-size: 3rem;
+  --bar-thickness: calc(var(--button-size) / 16);
+  --bar-spacing: calc(var(--button-size) / 6);
+  --bar-width: 80%;
+  --animation-duration: 0.18s;
 }
 
-/* Hamburger Menu */
 .hamburger_menu {
   width: var(--button-size);
   height: var(--button-size);
@@ -385,11 +364,11 @@ header button span {
 }
 
 .hamburger_menu span:nth-child(1) {
-  transform-origin: center;
+  transform-origin: center center;
 }
 
 .hamburger_menu span:nth-child(3) {
-  transform-origin: center;
+  transform-origin: center center;
 }
 
 #hamburger_checkbox {
@@ -412,8 +391,6 @@ header button span {
     rotate(-45deg);
 }
 
-/* Mobile Menu */
-/* Starea inițială (ascunsă) */
 .mobile_menu {
   display: none;
   visibility: hidden;
@@ -422,7 +399,7 @@ header button span {
   position: absolute;
   transform-origin: left top;
   transform: translate(2rem, 0rem);
-  border-radius: 0;
+  border-radius: 0px;
   z-index: 15;
   opacity: 0;
   width: 27rem;
@@ -430,22 +407,21 @@ header button span {
     opacity var(--animation-duration) ease-in-out;
 }
 
-/* Starea activă (vizibilă) */
 .mobile_menu.checked {
   transform: translate(2rem, 1rem);
-  visibility: visible; /* Setată la începutul animației */
+  visibility: visible;
   opacity: 1;
 }
 
 .mobile_menu {
   transition: transform var(--animation-duration) ease-in-out,
     opacity var(--animation-duration) ease-in-out,
-    visibility 0s var(--animation-duration); /* visibility se schimbă după 0.3s */
+    visibility 0s var(--animation-duration);
 }
 
 .mobile_menu.checked {
   transition: transform var(--animation-duration) ease-in-out,
-    opacity var(--animation-duration) ease-in-out, visibility 0s 0s; /* visibility devine vizibil imediat */
+    opacity var(--animation-duration) ease-in-out, visibility 0s 0s;
 }
 
 .mobile_menu .container {
@@ -459,7 +435,7 @@ header button span {
 
 .mobile_menu .cover {
   width: 100%;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
 }
@@ -474,7 +450,7 @@ header button span {
   height: 3.5rem;
   padding: 0.25rem 1rem 0.1rem;
   background-color: rgb(255, 255, 255);
-  border-bottom: 2px solid rgb(136 99 99);
+  border-bottom: 2px solid rgb(136, 99, 99);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -520,7 +496,7 @@ header button span {
 }
 
 .mobile_menu .whitesq {
-  transform-origin: center;
+  transform-origin: center center;
   right: 3.1rem;
   position: absolute;
   background-color: rgb(255, 255, 255);
@@ -537,9 +513,8 @@ header button span {
 
 .secondary_menu {
   list-style-type: none;
-  /* border-bottom: 1px solid black; */
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   width: 100%;
   max-height: 0px;
   overflow: hidden;
@@ -553,104 +528,99 @@ header button span {
 .secondary_menu button {
   width: 100%;
   height: 3.5rem;
-  padding: 0.25rem 1rem 0.1rem;
+  padding: 0.25rem 1rem 0.1rem 9%;
   background-color: rgb(255, 255, 255);
-  color: #404040;
+  color: rgb(64, 64, 64);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 9%;
   font-family: "Univers Pro Roman", sans-serif;
   font-weight: lighter;
 }
 
-/* Header simplificat pentru pc când dai scrol */
 header.simplified {
   position: fixed;
-  top: 0;
+  top: 0px;
   height: 5.5rem;
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255);
   border-bottom: var(--grosime_border) solid #a90e0e;
-  box-shadow: 0px 4px 10px #0000003b;
-
-  transition: all 195ms ease-out;
-  /* Transitie sciochi */
-
-  .contacts {
+  box-shadow: rgba(0, 0, 0, 0.23) 0px 4px 10px;
+  transition: 195ms ease-out;
+  & .contacts {
     display: none;
   }
 
-  .buttons {
+  & .buttons {
     align-items: center;
     display: flex;
-    justify-content: flex-end;
-    margin-top: 0;
+    place-content: center flex-end;
+    margin-top: 0px;
     flex-direction: row;
-    align-content: center;
-    color: #000000;
+    color: rgb(0, 0, 0);
   }
 
-  .btns {
-    margin-top: 0;
+  & .btns {
+    margin-top: 0px;
     height: 100%;
   }
 
-  .btns button p {
-    color: #000;
+  & .btns button p {
+    color: rgb(0, 0, 0);
   }
 
-  .arrow span {
+  & .arrow span {
     background-color: black;
   }
 
-  .logo {
+  & .logo {
     height: 88%;
-    margin-top: 0;
+    margin-top: 0px;
     margin-left: 1rem;
   }
 
-  .dropdown {
-    transform: translate(-25%, 0);
-    background-color: #ffffff;
+  & .dropdown {
+    transform: translate(-25%, 0px);
+    background-color: rgb(255, 255, 255);
   }
 
-  .dropdown .container {
-    border-top: 0;
-    box-shadow: 0px 0px 10px 0px #0000008f;
-    -webkit-clip-path: inset(0.4px -10px -10px -10px);
-    clip-path: inset(0.4px -10px -10px -10px);
-    background-color: #00000000;
+  & .dropdown .container {
+    border-top: 0px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 0px 10px 0px;
+    clip-path: inset(0.4px -10px -10px);
+    background-color: rgba(0, 0, 0, 0);
     z-index: 6;
   }
 
-  .dropdown .dropdown_menu {
+  & .dropdown .dropdown_menu {
     max-height: 0px;
     overflow: hidden;
   }
 
-  .dropdown.active .dropdown_menu {
+  & .dropdown.active .dropdown_menu {
     max-height: 10000px;
   }
 
-  .hamburger_menu span {
+  & .hamburger_menu span {
     background-color: black;
+  }
+
+  & .search_bar {
+    height: 50%;
+    border: 0.2rem solid rgb(169, 14, 14);
   }
 }
 
 header.simplified.hidden {
   top: -100%;
-  transition: all 225ms ease-in;
+  transition: 225ms ease-in;
 }
 
-/* Colț la navbar contacte */
 @media screen and (max-width: clamp(68rem, 1400px, 1900px)) {
   header .contacts {
     border-bottom-right-radius: 0px;
   }
 }
 
-/* Pentru calculatoare cu ecrane mici sau tablezi mari */
-/* 1200px, restul debuging */
 @media screen and (max-width: clamp(63rem, 1100px, 70rem)) {
   .buttons {
     display: none !important;
