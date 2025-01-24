@@ -145,8 +145,8 @@ header .nav_btn p:hover,
 header .search_bar {
   display: flex;
   align-items: center;
-  /* height: 100%; */
-  width: 13rem;
+  height: 100%;
+  /* width: 9rem; */
   aspect-ratio: 34/8;
   overflow: hidden;
   margin-left: auto;
@@ -167,7 +167,7 @@ header .search_bar .search_button {
   border: none;
   background-color: transparent;
   cursor: text;
-  margin-right: 0.2rem;
+  margin-right: 0.6rem;
 }
 
 header .search_bar .search_button img {
@@ -546,12 +546,10 @@ header.simplified {
   background-color: #ffffff;
   border-bottom: var(--grosime_border) solid #a90e0e;
   box-shadow: 0px 4px 10px #0000003b;
-  
+
   transition: all 195ms ease-out;
   /* Transitie sciochi */
-  
-  
-  
+
   .contacts {
     display: none;
   }
@@ -599,20 +597,23 @@ header.simplified {
     z-index: 6;
   }
 
-  .dropdown .dropdown_menu
-  {
+  .dropdown .dropdown_menu {
     max-height: 0px;
     overflow: hidden;
   }
 
-  .dropdown.active .dropdown_menu
-  {
+  .dropdown.active .dropdown_menu {
     max-height: 10000px;
   }
 
-  .hamburger_menu span
-  {
+  .hamburger_menu span {
     background-color: black;
+  }
+
+  .search_bar {
+    border: 2px solid black;
+    margin-right: 1rem;
+    height: 52%;
   }
 }
 
