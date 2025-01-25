@@ -152,6 +152,7 @@ document.addEventListener('load', alignElements);
 // Tilifon
 const checkbox = document.getElementById('hamburger_checkbox');
 const mobileMenu = document.getElementById('mobile_menu');
+const mobileMenu_phone = document.getElementById('mobile_menu_phone');
 
 // Verifică click-uri pe document
 document.addEventListener('click', function (event) {
@@ -160,10 +161,11 @@ document.addEventListener('click', function (event) {
     // console.log("Clicked target:", event.target);
     // console.log("Checkbox state before:", checkbox.classList.contains('checked'));
     // console.log("Este display:", document.getElementById('hamburger_menu').style.display == 'none');
-    if (!checkbox.contains(event.target) && !mobileMenu.contains(event.target) && !document.getElementById('hamburger_menu').contains(event.target)) {
+    if (!checkbox.contains(event.target) && (!mobileMenu.contains(event.target) || !mobileMenu_phone.contains(event.target)) && !document.getElementById('hamburger_menu').contains(event.target)) {
         // console.log("Clicked outside. Removing classes.");
         checkbox.classList.remove('checked');
         mobileMenu.classList.remove('checked');
+        mobileMenu_phone.classList.remove('checked');
         reset_mobileMenu();
     }
     else if (checkbox.contains(event.target) || document.getElementById('hamburger_menu').contains(event.target)) {
@@ -172,9 +174,11 @@ document.addEventListener('click', function (event) {
             // console.log("Adding 'checked' class.");
             checkbox.classList.add('checked');
             mobileMenu.classList.add('checked');
+            mobileMenu_phone.classList.add('checked');
         } else {
             // console.log("Removing 'checked' class.");
             checkbox.classList.remove('checked');
+            mobileMenu_phone.classList.remove('checked');
             mobileMenu.classList.remove('checked');
             reset_mobileMenu();
 
@@ -193,7 +197,7 @@ window.onresize = function () {
 
     if (displayValue === 'none') {
         checkbox.classList.remove('checked');
-        mobileMenu.classList.remove('checked');
+        mobileMenu_phone.classList.remove('checked');
     }
 };
 
@@ -231,17 +235,22 @@ const header = document.querySelector('header');
 let lastScrollY = window.scrollY;
 
 window.addEventListener('scroll', () => {
+    scrollHandlerHeader();
+});
+
+function scrollHandlerHeader()
+{
     var currentScrollY = window.scrollY;
 
     // Adaugă clasa 'simplified' dacă scroll-ul e peste 100svh
-    if (currentScrollY > window.innerHeight) {
+    if (currentScrollY > window.innerHeight || getScreenWidth() <= 768) {
         header.classList.add('simplified');
     } else {
         header.classList.remove('simplified');
     }
 
     // Ascunde sau arată header-ul în funcție de direcția scroll-ului
-    if (currentScrollY > lastScrollY) {
+    if (currentScrollY > lastScrollY && getScreenWidth() > 768) {
         // Scroll down
         header.classList.add('hidden');
     } else {
@@ -250,7 +259,7 @@ window.addEventListener('scroll', () => {
     }
 
     lastScrollY = currentScrollY;
-});
+}
 
 
 // Video button animation handle
@@ -263,3 +272,16 @@ videoButton.addEventListener('mousemove', (e) => {
     videoButton.style.setProperty('--mouse-x', x + "px");
     videoButton.style.setProperty('--mouse-y', y + "px");
 });
+
+window.addEventListener('resize', () => {
+    scrollHandlerHeader();
+});
+
+function getScreenWidth() {
+    const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    console.log(`Lățimea ecranului este: ${width}px`);
+    return width;
+}
+
+// Apelează funcția pentru a verifica lățimea ecranului
+getScreenWidth();

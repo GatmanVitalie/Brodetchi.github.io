@@ -385,7 +385,8 @@ header button span {
     max-width: calc(var(--button-size) * 0.8);
   }
 
-  & .search_bar:focus, .search_bar:hover {
+  & .search_bar:focus,
+  .search_bar:hover {
     max-width: 10000px;
   }
 
@@ -566,7 +567,7 @@ header button span {
   width: var(--marime_patrat);
   height: var(--marime_patrat);
   margin: 0px;
-  transform: translate(0.59rem, -0.6rem) rotate(45deg);
+  transform: translate(0.59rem, -0.5rem) rotate(45deg);
   top: 0px;
   backface-visibility: hidden;
   will-change: transform;
@@ -680,7 +681,7 @@ header.simplified {
 
   & .search_bar {
     height: 50%;
-    border: 0.2rem solid rgb(169, 14, 14);
+    border: 0.2rem solid var(--bordo);
   }
 }
 
@@ -698,7 +699,7 @@ header.simplified.hidden {
 @media screen and (max-width: clamp(63rem, 1100px, 70rem)) {
   .buttons {
     display: none !important;
-    background-color: rgb(255, 0, 0);
+    background-color: var(--bordo);
   }
 
   .phone_btns {
@@ -714,8 +715,32 @@ header.simplified.hidden {
   }
 }
 
+#mobile_menu_phone {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .mobile_menu {
     width: 100%;
+  }
+
+  header.simplified {
+    height: 4rem;
+
+    & .phone_btns {
+      margin-right: 1.5rem;
+    }
+
+    & #mobile_menu {
+     display: none;
+    }
+
+    & .mobile_menu_phone.checked {
+      transform: translate(2rem, 1rem);
+      visibility: visible;
+      opacity: 1;
+      position: fixed;
+      top: 5rem;
+    }
   }
 }
