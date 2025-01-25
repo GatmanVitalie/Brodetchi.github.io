@@ -107,34 +107,41 @@ const elementMap = {
 
 // Funcție generală pentru aliniere
 function alignElements() {
-    const header = document.querySelector('header'); // Selectăm header-ul
-    const headerHeight = header.offsetHeight; // Obținem înălțimea header-ului
-    const isSimplified = header.classList.contains('simplified'); // Verificăm dacă are clasa `simplified`
+    if (getScreenWidth() >= 768) {
+        const header = document.querySelector('header'); // Selectăm header-ul
+        const headerHeight = header.offsetHeight; // Obținem înălțimea header-ului
+        const isSimplified = header.classList.contains('simplified'); // Verificăm dacă are clasa `simplified`
 
-    for (const [baseElementId, settings] of Object.entries(elementMap)) {
-        const baseElement = document.getElementById(baseElementId);
-        const dropdownElement = document.getElementById(settings.dropdown);
+        for (const [baseElementId, settings] of Object.entries(elementMap)) {
+            const baseElement = document.getElementById(baseElementId);
+            const dropdownElement = document.getElementById(settings.dropdown);
 
-        if (baseElement && dropdownElement) {
-            const baseRect = baseElement.getBoundingClientRect(); // Coordonatele elementului față de viewport
+            if (baseElement && dropdownElement) {
+                const baseRect = baseElement.getBoundingClientRect(); // Coordonatele elementului față de viewport
 
-            // Setarea poziției `top`
-            if (isSimplified) {
-                dropdownElement.style.top = `${headerHeight}px`; // Înălțimea header-ului când are clasa `simplified`
-            } else {
-                dropdownElement.style.top = `${baseRect.bottom}px`; // Coordonata de jos a elementului de bază
+                // Setarea poziției `top`
+                if (isSimplified) {
+                    dropdownElement.style.top = `${headerHeight}px`; // Înălțimea header-ului când are clasa `simplified`
+                } else {
+                    dropdownElement.style.top = `${baseRect.bottom}px`; // Coordonata de jos a elementului de bază
+                }
+
+                // Setarea poziției `left` bazată pe aliniere
+                if (settings.align === 'left') {
+                    dropdownElement.style.left = `${baseRect.left}px`;
+                } else if (settings.align === 'right') {
+                    dropdownElement.style.left = `${baseRect.right - dropdownElement.offsetWidth}px`;
+                } else if (settings.align === 'center') {
+                    dropdownElement.style.left = `${baseRect.left + (baseRect.width - dropdownElement.offsetWidth) / 2}px`;
+                }
+
             }
-
-            // Setarea poziției `left` bazată pe aliniere
-            if (settings.align === 'left') {
-                dropdownElement.style.left = `${baseRect.left}px`;
-            } else if (settings.align === 'right') {
-                dropdownElement.style.left = `${baseRect.right - dropdownElement.offsetWidth}px`;
-            } else if (settings.align === 'center') {
-                dropdownElement.style.left = `${baseRect.left + (baseRect.width - dropdownElement.offsetWidth) / 2}px`;
-            }
-
         }
+    }
+    else {
+        document.getElementById('mobile_menu').style.left = 0;
+        document.getElementById('mobile_menu').style.right = 0;
+        document.getElementById('mobile_menu').style.top = 0;
     }
 }
 
@@ -152,7 +159,6 @@ document.addEventListener('load', alignElements);
 // Tilifon
 const checkbox = document.getElementById('hamburger_checkbox');
 const mobileMenu = document.getElementById('mobile_menu');
-const mobileMenu_phone = document.getElementById('mobile_menu_phone');
 
 // Verifică click-uri pe document
 document.addEventListener('click', function (event) {
@@ -161,11 +167,10 @@ document.addEventListener('click', function (event) {
     // console.log("Clicked target:", event.target);
     // console.log("Checkbox state before:", checkbox.classList.contains('checked'));
     // console.log("Este display:", document.getElementById('hamburger_menu').style.display == 'none');
-    if (!checkbox.contains(event.target) && (!mobileMenu.contains(event.target) || !mobileMenu_phone.contains(event.target)) && !document.getElementById('hamburger_menu').contains(event.target)) {
+    if (!checkbox.contains(event.target) && !mobileMenu.contains(event.target) && !document.getElementById('hamburger_menu').contains(event.target)) {
         // console.log("Clicked outside. Removing classes.");
         checkbox.classList.remove('checked');
         mobileMenu.classList.remove('checked');
-        mobileMenu_phone.classList.remove('checked');
         reset_mobileMenu();
     }
     else if (checkbox.contains(event.target) || document.getElementById('hamburger_menu').contains(event.target)) {
@@ -174,11 +179,9 @@ document.addEventListener('click', function (event) {
             // console.log("Adding 'checked' class.");
             checkbox.classList.add('checked');
             mobileMenu.classList.add('checked');
-            mobileMenu_phone.classList.add('checked');
         } else {
             // console.log("Removing 'checked' class.");
             checkbox.classList.remove('checked');
-            mobileMenu_phone.classList.remove('checked');
             mobileMenu.classList.remove('checked');
             reset_mobileMenu();
 
@@ -197,7 +200,7 @@ window.onresize = function () {
 
     if (displayValue === 'none') {
         checkbox.classList.remove('checked');
-        mobileMenu_phone.classList.remove('checked');
+        mobileMenu.classList.remove('checked');
     }
 };
 
@@ -238,8 +241,11 @@ window.addEventListener('scroll', () => {
     scrollHandlerHeader();
 });
 
-function scrollHandlerHeader()
-{
+window.addEventListener('load', () => {
+    scrollHandlerHeader();
+});
+
+function scrollHandlerHeader() {
     var currentScrollY = window.scrollY;
 
     // Adaugă clasa 'simplified' dacă scroll-ul e peste 100svh
@@ -253,6 +259,9 @@ function scrollHandlerHeader()
     if (currentScrollY > lastScrollY && getScreenWidth() > 768) {
         // Scroll down
         header.classList.add('hidden');
+        checkbox.classList.remove('checked');
+        mobileMenu.classList.remove('checked');
+
     } else {
         // Scroll up
         header.classList.remove('hidden');

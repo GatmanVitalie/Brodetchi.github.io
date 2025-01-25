@@ -721,7 +721,7 @@ header.simplified.hidden {
 
 @media (max-width: 768px) {
   .mobile_menu {
-    width: 100%;
+    width: 100svw;
   }
 
   header.simplified {
@@ -731,16 +731,27 @@ header.simplified.hidden {
       margin-right: 1.5rem;
     }
 
-    & #mobile_menu {
+    & .mobile_menu {
      display: none;
+     position: fixed;
     }
 
-    & .mobile_menu_phone.checked {
-      transform: translate(2rem, 1rem);
+    & .mobile_menu .container
+    {
+      border-top: none;
+    }
+
+    & .mobile_menu .whitesq {
+     display: none;
+     
+    }
+
+    & .mobile_menu.checked {
+      transform: translate(0rem, 4rem);
       visibility: visible;
       opacity: 1;
-      position: fixed;
       top: 5rem;
+      display: flex;
     }
   }
 }
