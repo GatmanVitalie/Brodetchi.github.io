@@ -378,6 +378,21 @@ header button span {
   align-items: center;
   flex-direction: row;
   margin-right: 3.5rem;
+
+  & .search_bar {
+    height: calc(var(--button-size) * 0.8);
+    margin-right: 1rem;
+    max-width: calc(var(--button-size) * 0.8);
+  }
+
+  & .search_bar:focus, .search_bar:hover {
+    max-width: 10000px;
+  }
+
+  & .search_bar form {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
 :root {
@@ -584,6 +599,10 @@ header button span {
   font-weight: lighter;
 }
 
+.language-selector_2 {
+  display: none;
+}
+
 header.simplified {
   position: fixed;
   top: 0px;
@@ -594,6 +613,15 @@ header.simplified {
   transition: 195ms ease-out;
   & .contacts {
     display: none;
+  }
+
+  & .language-selector_2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    flex-direction: column;
   }
 
   & .buttons {

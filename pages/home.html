@@ -55,14 +55,14 @@
 
             <div class="buttons">
                 <div class="contacts_container">
-                   <!-- Pune aici selectorul de limba -->
-                   <div class="language-selector">
-                    <select id="language" aria-label="Selectează limba">
-                        <option value="ro">Ro</option>
-                        <option value="en">En</option>
-                        <option value="ru">Ru</option>
-                    </select>
-                </div>
+                    <!-- Pune aici selectorul de limba -->
+                    <div class="language-selector">
+                        <select id="language" aria-label="Selectează limba">
+                            <option value="ro">Ro</option>
+                            <option value="en">En</option>
+                            <option value="ru">Ru</option>
+                        </select>
+                    </div>
 
                     <div class="contacts">
                         <button class="tel"><img src="../images/Phone.png"> <a href="tel:+079040510">+373 068 323
@@ -112,11 +112,25 @@
                         </form>
                     </div>
 
+                    <div class="language-selector_2">
+                        <button class="ro" id="ro">Ro</button>
+                        <button class="en" id="en">En</button>
+                        <button class="ru" id="ru">Ru</button>
+                    </div>
+
                 </div>
             </div>
 
             <!-- There is what i did so far -->
             <div class="phone_btns" id="phone_btns">
+                <div class="search_bar">
+                    <form action="#" method="get">
+                        <input type="text" name="search" placeholder="Caută...">
+                        <button type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
                 <input type="button" id="hamburger_checkbox">
                 <label for="hamburger_checkbox" class="hamburger_menu" id="hamburger_menu">
                     <span></span>
