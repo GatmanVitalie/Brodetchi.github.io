@@ -56,7 +56,13 @@
             <div class="buttons">
                 <div class="contacts_container">
                     <!-- Pune aici selectorul de limba -->
-                   
+                    <div class="language-selector">
+                        <select id="language" aria-label="Selectează limba">
+                            <option value="ro">Ro</option>
+                            <option value="en">En</option>
+                            <option value="ru">Ru</option>
+                        </select>
+                    </div>
 
                     <div class="contacts">
                         <button class="tel"><img src="../images/Phone.png"> <a href="tel:+079040510">+373 068 323
@@ -97,15 +103,34 @@
                         </button>
                     </div>
 
-             
+                    <div class="search_bar">
+                        <form action="#" method="get">
+                            <input type="text" name="search" placeholder="Caută...">
+                            <button type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
 
+                    <div class="language-selector_2">
+                        <button class="ro" id="ro">Ro</button>
+                        <button class="en" id="en">En</button>
+                        <button class="ru" id="ru">Ru</button>
+                    </div>
 
                 </div>
             </div>
 
             <!-- There is what i did so far -->
             <div class="phone_btns" id="phone_btns">
-                
+                <div class="search_bar">
+                    <form action="#" method="get">
+                        <input type="text" name="search" placeholder="Caută...">
+                        <button type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
                 <input type="button" id="hamburger_checkbox">
                 <label for="hamburger_checkbox" class="hamburger_menu" id="hamburger_menu">
                     <span></span>
@@ -187,7 +212,6 @@
             </div>
         </div>
 
-
         <div class="dropdown" id="servici_dd">
             <spam class="whitesq"></spam>
             <div class="container">
@@ -228,9 +252,10 @@
 
             <div class="video-text-overlay">
                 <div class="text-content">
-                    <h2>Lorem Ipsum</h2>
+                    <h2>Noi suntem</h2>
                     <p>
-                        Lorem ipsum dolor sit amet diam ipsum vulputate sit rebum consetetur rebum dolor
+                        Brutăria cu tradiții BRODEȚCHI ține cont de tendințele coloriste actuale Culoarea anului este
+                        aici, în fiecare pâine proaspăt coaptă!
                     </p>
                     <a href="#learn-more" class="video_btn">Află mai multe</a>
                     <!-- <a href="#learn-more" class="video_btn_2">Learn More</a> -->
