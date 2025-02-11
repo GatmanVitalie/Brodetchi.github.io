@@ -1,0 +1,31 @@
+.noutati_futter {
+    width: 100%;
+    height: 8cm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('.././images/Caragiale_cu_patani.webp');
+    background-size: cover;
+        background-position: top center;
+
+}
+
+.title_show
+{
+    margin: 0 !important;
+    backdrop-filter: blur(4px); /* Adjust the blur intensity as needed */
+    -webkit-backdrop-filter: blur(1px);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2cm;
+}
+
+.articole
+{
+    max-width: 70cm !important;
+    margin-bottom: 1cm !important;
+}
